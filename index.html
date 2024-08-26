@@ -23,11 +23,35 @@
             <br>
             <div id="user-submit-btn">
                 <label>Enter a username</label>
-                <input type="text">
-                <button id="user-submit">Submit</button>
+                <input id="username" type="text">
+                <button id="user-submit" class="button">Submit</button>
+                <p id="welcome-message"></p>
             </div>
-            
         </section>
+        <section>
+            <div id="next-choose-container" class="hidden">
+                <button id="game-choices-btn" class="button">Go to game choices</button>
+            </div>
+        </section>
+        <section id="game-choices-container" class="hidden">
+            <div class="game-choice">
+                <h2>Guess the Shirt</h2>
+                <p>You will be shown a 'famous' football shirt from the past 40 years...or so.</p>
+                <p>All you have to do a select the correct answer from four potential teams</p>
+                <p>This is the 'easy' mode - continue if you know about the infamous 'grey' kit at the Dell.</p>
+                <p>Good luck!</p>
+                <button id="guess-Shirt-Start-Btn" class="button">Start</button>
+            </div>
+            <div class="game-choice">
+                <h2>Guess the Year</h2>
+                <p>You will be shown another shirt from a team within the last 40 years.</p>
+                <p>Your goal is to choose the correct year that the kit was worn in the photo.</p>
+                <p>Only enter if you think you know your Gianfranco Zolas from your Michael Duberrys!</p>
+                <p>Good luck!</p>
+                <button id="guess-Year-Btn" class="button">Start</button>
+            </div>
+        </section>
+        
     </main>
     <footer>
 

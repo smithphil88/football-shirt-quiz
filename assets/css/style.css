@@ -2,7 +2,7 @@
 
 
 body {
-    background-color: yellowgreen;
+    background-color: greenyellow;
     font-family: Silkscreen;
 }
 
@@ -28,4 +28,34 @@ body {
 
 #user-submit-btn {
     padding: 20px 0px;
+}
+
+#next-choose-container {
+    margin: auto;
+    width:30%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.button {
+    font-family: Silkscreen;
+    color: white;
+    background-color: blue;
+    border-radius: 3px;
+}
+
+#game-choices-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.game-choice {
+    border: solid black 2px;
+    text-align: center;
+    width: 400px;
+    padding: 10px;
 }
