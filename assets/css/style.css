@@ -46,6 +46,7 @@ body {
     color: white;
     background-color: blue;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 #game-choices-container {
@@ -58,4 +59,17 @@ body {
     text-align: center;
     width: 400px;
     padding: 10px;
+}
+
+#question-container {
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    
+}
+
+#answer-btns {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }

@@ -13,7 +13,7 @@
         </h1>
     </header>
     <main>
-        <section id="rules-container">
+        <section id="rules-container" class="">
             <h2 id="rules-title">Rules</h2>
             <p class="rules">Enter a username in the box below</p>
             <p class="rules">Choose a game type - Guess the shirt or Guess the year</p>
@@ -40,7 +40,7 @@
                 <p>All you have to do a select the correct answer from four potential teams</p>
                 <p>This is the 'easy' mode - continue if you know about the infamous 'grey' kit at the Dell.</p>
                 <p>Good luck!</p>
-                <button id="guess-Shirt-Start-Btn" class="button">Start</button>
+                <button id="guess-shirt-start-btn" class="button">Start</button>
             </div>
             <div class="game-choice">
                 <h2>Guess the Year</h2>
@@ -48,10 +48,21 @@
                 <p>Your goal is to choose the correct year that the kit was worn in the photo.</p>
                 <p>Only enter if you think you know your Gianfranco Zolas from your Michael Duberrys!</p>
                 <p>Good luck!</p>
-                <button id="guess-Year-Btn" class="button">Start</button>
+                <button id="guess-year-start-btn" class="button">Start</button>
             </div>
         </section>
-        
+        <section id="question-container" class ="hidden">
+            <div id="question-box" >
+                    <p>Whose Shirt is this?</p>
+                    <img class="team-shirt" src="assets/images/ger94.webp">
+            </div>
+            <div id="answer-btns">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+            </div>
+        </section>
     </main>
     <footer>
 
