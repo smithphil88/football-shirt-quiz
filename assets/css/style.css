@@ -68,8 +68,25 @@ body {
     
 }
 
-#answer-btns {
-    display: flex;
-    flex-direction: column;
+.answer-btns {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 100px 100px;
+    gap: 30px;
+    margin: 40px 0px;
     cursor: pointer;
+}
+
+.answer-btn {
+    width: 200px;
+    border: none;
+    padding: 24px 32px;
+    font-size: 18px;
+    background: rgb(0, 110, 255);
+    color: white;
+}
+
+#shirt-image {
+    width: 60%;
+    height: auto;
 }

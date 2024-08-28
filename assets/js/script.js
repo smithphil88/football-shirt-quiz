@@ -32,7 +32,7 @@ const shuffleArray = (array) => {
 
 var username;
 const shirtimage = document.getElementById("shirt-image");
-const answerbtns = document.getElementById("answer-btns");
+const answerbtns = document.getElementsByClassName("answer-btns");
 const questionbox = document.getElementById("question-box");
 
 
@@ -59,7 +59,14 @@ function startGuessShirtTeam () {
     document.getElementById('question-container').classList.remove('hidden');
 
     shirtimage.src = quizData1[questionNumber].question;
-}
+    
+    quizData1[questionNumber].answers.forEach((o) => {
+        const answer = document.createElement("button");
+        answer.classList.add("answer-btn");
+        answer.innerHTML = o;
+        answerbtns.appendChild(answer);
+    });
+};
 
 
 
