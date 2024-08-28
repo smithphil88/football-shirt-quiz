@@ -61,7 +61,7 @@ const answerbtns = document.getElementsByClassName("answer-btns");
 const questionbox = document.getElementById("question-box");
 
 
-let questionNumber = 0;
+let questionNumber = 9;
 
 document.getElementById("user-submit").onclick = function() {
     username = document.getElementById("username").value;

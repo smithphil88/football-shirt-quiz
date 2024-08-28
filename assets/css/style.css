@@ -62,32 +62,41 @@ body {
 }
 
 #question-container {
-    display: flex;
-    justify-content: space-around;
-    background-color: aqua;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#question-box {
+    text-align: center;
+}
+
+#question-title {
+    text-align: center;
 }
 
 .answer-btns {
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 100px 100px;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 100px 100px 100px;
     gap: 30px;
     margin: 40px 0px;
-    cursor: pointer;
 }
 
 .answer-btn {
     font-family: Silkscreen;
-    width: 200px;
+    width: 500px;
     border: none;
     padding: 24px 32px;
     font-size: 18px;
     background: rgb(0, 110, 255);
     color: white;
+    cursor: pointer;
 }
 
 #shirt-image {
-    width: 100%;
-    height: 100%;
+    margin: auto;
+    width: 50%;
+    height: 90%;
+    border: solid black 2px;
 }
