@@ -1,28 +1,53 @@
 var quizData1 = [
     {
-        question: "assets/images/Marseille1990-91Home.png",
-        answers: ["Lyon", "PSG", "Marseille", "Montpellier"],
-        correct: "Marseille",
+        question: "assets/images/accrington-stanley-95-96.jpg",
+        answers: ["Accrington Stanley", "Swindon", "Rotherham", "Bristol City"],
+        correct: "Accrington Stanley",
     },
     {
-        question: "assets/images/ger94.webp",
-        answers: ["Germany", "Belgium", "England", "Denmark"],
-        correct: "Germany",
+        question: "assets/images/arsenal_football_shirt_91-93.jpg",
+        answers: ["Arsenal", "Chelsea", "Newcastle", "Liverpool"],
+        correct: "Arsenal",
     },
     {
-        question: "assets/images/Newcastle 91.png",
-        answers: ["West Ham", "Norwich", "Newcastle", "Ipswich"],
-        correct: "Newcastle",
+        question: "assets/images/AV93-95.jpg",
+        answers: ["West Ham", "Norwich", "Aston Villa", "Ipswich"],
+        correct: "Aston Villa",
     },
     {
-        question: "assets/images/Nigeria1994WorldCupAway.png",
-        answers: ["Cameroon", "Nigeria", "Ivory Coast", "South Africa"],
-        correct: "Nigeria",
+        question: "assets/images/blackburn-rovers-away-football-shirt-1994-1995-s_3988_1.jpg",
+        answers: ["Liverpool", "Blackburn Rovers", "Manchester United", "Southampton"],
+        correct: "Blackburn Rovers",
     },
     {
-        question: "assets/images/Wolves 97.png",
-        answers: ["Swindon", "West Brom", "Oldham", "Wolves"],
-        correct: "Wolves",
+        question: "assets/images/bolton-99-01.jpg",
+        answers: ["Swindon", "Bolton", "Oldham", "Wolves"],
+        correct: "Bolton",
+    },
+    {
+        question: "assets/images/crystal-palace93-94.jpg",
+        answers: ["Tottenham Hotspur", "Arsenal", "Crystal Palace", "Brentford"],
+        correct: "Crystal Palace",
+    },
+    {
+        question: "assets/images/ipswich-town92-94.jpg",
+        answers: ["Ipswich Town", "Chelsea", "Everton", "Manchester City"],
+        correct: "Ipswich Town",
+    },
+    {
+        question: "assets/images/Liverpool-91-92.jpg",
+        answers: ["Manchester United", "Liverpool", "Arsenal", "Sheffield United"],
+        correct: "Liverpool",
+    },
+    {
+        question: "assets/images/ManU-95-96.jpg",
+        answers: ["Leeds", "Manchester United", "Newcastle", "Bradford City"],
+        correct: "Manchester United",
+    },
+    {
+        question: "assets/images/TH-95-96.jpg",
+        answers: ["Arsenal", "Leeds", "Tottenham Hotspur", "Blackburn Rovers"],
+        correct: "Tottenham Hotspur",
     },
 ];
 
@@ -61,10 +86,10 @@ function startGuessShirtTeam () {
     shirtimage.src = quizData1[questionNumber].question;
     
     quizData1[questionNumber].answers.forEach((o) => {
-        const answer = document.createElement("button");
-        answer.classList.add("answer-btn");
-        answer.innerHTML = o;
-        answerbtns.appendChild(answer);
+        document.getElementById('answer-button-1').innerText = quizData1[questionNumber].answers[0]
+        document.getElementById('answer-button-2').innerText = quizData1[questionNumber].answers[1]
+        document.getElementById('answer-button-3').innerText = quizData1[questionNumber].answers[2]
+        document.getElementById('answer-button-4').innerText = quizData1[questionNumber].answers[3]
     });
 };
 
