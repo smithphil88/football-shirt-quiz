@@ -1,32 +1,42 @@
 var quizData1 = [
     {
-        question: "/images/ger94.webp",
-        options: ["Germany", "Belgium", "England", "Denmark"],
-        correct: "Germany",
-    },
-    {
-        question: "/images/Marseille1990-91Home.png",
-        options: ["Lyon", "PSG", "Marseille", "Montpellier"],
+        question: "assets/images/Marseille1990-91Home.png",
+        answers: ["Lyon", "PSG", "Marseille", "Montpellier"],
         correct: "Marseille",
     },
     {
-        question: "/images/Newcastle 91.png",
-        options: ["West Ham", "Norwich", "Newcastle", "Ipswich"],
+        question: "assets/images/ger94.webp",
+        answers: ["Germany", "Belgium", "England", "Denmark"],
+        correct: "Germany",
+    },
+    {
+        question: "assets/images/Newcastle 91.png",
+        answers: ["West Ham", "Norwich", "Newcastle", "Ipswich"],
         correct: "Newcastle",
     },
     {
-        question: "/images/Nigeria1994WorldCupAway.png",
-        options: ["Cameroon", "Nigeria", "Ivory Coast", "South Africa"],
+        question: "assets/images/Nigeria1994WorldCupAway.png",
+        answers: ["Cameroon", "Nigeria", "Ivory Coast", "South Africa"],
         correct: "Nigeria",
     },
     {
-        question: "/images/Wolves 97.png",
-        options: ["Swindon", "West Brom", "Oldham", "Wolves"],
+        question: "assets/images/Wolves 97.png",
+        answers: ["Swindon", "West Brom", "Oldham", "Wolves"],
         correct: "Wolves",
     },
 ];
 
+const shuffleArray = (array) => {
+    return array.slice().sort(() => Math.random() - 0.5);
+};
+
 var username;
+const shirtimage = document.getElementById("shirt-image");
+const answerbtns = document.getElementById("answer-btns");
+const questionbox = document.getElementById("question-box");
+
+
+let questionNumber = 0;
 
 document.getElementById("user-submit").onclick = function() {
     username = document.getElementById("username").value;
@@ -47,7 +57,11 @@ document.getElementById('guess-year-start-btn').addEventListener('click', startG
 function startGuessShirtTeam () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
+
+    shirtimage.src = quizData1[questionNumber].question;
 }
+
+
 
 function startGuessShirtYear () {
     document.getElementById('game-choices-container').classList.add('hidden');
