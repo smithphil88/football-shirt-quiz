@@ -82,6 +82,7 @@ document.getElementById('guess-year-start-btn').addEventListener('click', startG
 function startGuessShirtTeam () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
+    document.getElementById('next-btn').classList.remove('hidden');
 
     shirtimage.src = quizData1[questionNumber].question;
     
