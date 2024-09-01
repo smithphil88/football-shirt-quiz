@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <!--Title-->
     <header>
         <h1 id="title">
             <i class="fa-solid fa-futbol"></i>The Retro Football Shirt Quiz<i class="fa-solid fa-futbol"></i>
         </h1>
     </header>
     <main>
+        <!--Section that includes rules and requires user to input a name-->
         <section id="rules-container" class="">
             <h2 id="rules-title">Rules</h2>
             <p class="rules">Enter a username in the box below</p>
@@ -29,10 +31,12 @@
             </div>
         </section>
         <section>
+            <!--A section containing a button to proceed onto the game type selection screen-->
             <div id="next-choose-container" class="hidden">
                 <button id="game-choices-btn" class="button">Go to game choices</button>
             </div>
         </section>
+        <!--A section that informs the user what the difference is between the game modes-->
         <section id="game-choices-container" class="hidden">
             <div class="game-choice">
                 <h2>Guess the Shirt</h2>
@@ -51,6 +55,7 @@
                 <button id="guess-year-start-btn" class="button">Start</button>
             </div>
         </section>
+        <!--The layout of the questions, answers, scores and next question button-->
         <section id="question-container" class ="hidden">
             <div class="score-box" >
                 <p>Question # <span id="q-number">1</span></p>
@@ -67,8 +72,11 @@
                 <button id="answer-button-4" class="answer-btn">answer 4</button>
             </div>
             <div id="next-btn-container">
-                <button id="next-btn" class="button hidden">Next Question</button>
+                <button id="next-btn" class="button">Next Question</button>
             </div>
+        </section>
+        <section id="results" class="hidden">
+            <p>You scored...</p>
         </section>
     </main>
     <footer>

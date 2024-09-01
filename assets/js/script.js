@@ -55,6 +55,7 @@ var username = document.getElementById("username");
 const shirtimage = document.getElementById("shirt-image");
 const answerbtns = document.getElementsByClassName("answer-btns");
 const questionbox = document.getElementById("question-box");
+const maxquestions = 9;
 
 document.getElementById('user-submit').addEventListener('click', confirmUser);
 
@@ -83,9 +84,10 @@ function startGuessShirtTeam () {
     document.getElementById('question-container').classList.remove('hidden');
     createQuestion();
     displayNumberOfQuestions();
+    questionNumber = 0;
 }
 
-var questionNumber = 0;
+let questionNumber = '';
 
 // a function that displays the shirts from the quiz array and the answers in their boxes.
 function createQuestion () {
@@ -110,8 +112,21 @@ function showCurrentQuestionNumber() {
     document.getElementById('q-number').innerText = questionNumber + 1;
 }
 
+document.getElementById('next-btn').addEventListener('click', nextQuestion);
 
+function nextQuestion () {
+    if (questionNumber >= maxquestions - 1) {
+        displayQuizResult();
+        return;
+    }
+    questionNumber++;
+    createQuestion();
+}
 
+function displayQuizResult() {
+    document.getElementById('question-container').classList.add('hidden');
+    document.getElementById('results').classList.remove('hidden');
+}
 
 document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
 
