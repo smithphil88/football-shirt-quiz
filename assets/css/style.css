@@ -44,7 +44,7 @@ body {
 .button {
     font-family: Silkscreen;
     color: black;
-    background-color: cyan;
+    background-color: yellow;
     border-radius: 3px;
     cursor: pointer;
 }
@@ -63,7 +63,7 @@ body {
 
 #question-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 }
 

@@ -55,19 +55,26 @@ const shuffleArray = (array) => {
     return array.slice().sort(() => Math.random() - 0.5);
 };
 
-var username;
+var username = document.getElementById("username");
 const shirtimage = document.getElementById("shirt-image");
 const answerbtns = document.getElementsByClassName("answer-btns");
 const questionbox = document.getElementById("question-box");
 
 
-let questionNumber = 9;
+let questionNumber = 0;
 
-document.getElementById("user-submit").onclick = function() {
+document.getElementById('user-submit').addEventListener('click', confirmUser);
+
+function confirmUser () {
+    if (document.getElementById("username").value === ''){
+        alert('Please enter a name');
+    } else {
     username = document.getElementById("username").value;
     document.getElementById("welcome-message").textContent = `Welcome ${username}, are you ready to play? Click the button below to choose your game mode.`
     document.getElementById('next-choose-container').classList.remove('hidden');
-}
+    console.log(username);
+}}
+
 document.getElementById('game-choices-btn').addEventListener('click', gameType);
 
 function gameType () {
@@ -83,8 +90,10 @@ function startGuessShirtTeam () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
     document.getElementById('next-btn').classList.remove('hidden');
+    createQuestion();
+}
 
-    shirtimage.src = quizData1[questionNumber].question;
+    function createQuestion () {shirtimage.src = quizData1[questionNumber].question;
     
     quizData1[questionNumber].answers.forEach((o) => {
         document.getElementById('answer-button-1').innerText = quizData1[questionNumber].answers[0]
