@@ -51,20 +51,14 @@ var quizData1 = [
     },
 ];
 
-const shuffleArray = (array) => {
-    return array.slice().sort(() => Math.random() - 0.5);
-};
-
 var username = document.getElementById("username");
 const shirtimage = document.getElementById("shirt-image");
 const answerbtns = document.getElementsByClassName("answer-btns");
 const questionbox = document.getElementById("question-box");
 
-
-let questionNumber = 0;
-
 document.getElementById('user-submit').addEventListener('click', confirmUser);
 
+// a function that requires the user to enter in a username
 function confirmUser () {
     if (document.getElementById("username").value === ''){
         alert('Please enter a name');
@@ -72,11 +66,10 @@ function confirmUser () {
     username = document.getElementById("username").value;
     document.getElementById("welcome-message").textContent = `Welcome ${username}, are you ready to play? Click the button below to choose your game mode.`
     document.getElementById('next-choose-container').classList.remove('hidden');
-    console.log(username);
 }}
 
 document.getElementById('game-choices-btn').addEventListener('click', gameType);
-
+// a function that hides the rules and adds the game choice selection screen
 function gameType () {
     document.getElementById('rules-container').classList.add('hidden');
     document.getElementById('game-choices-container').classList.remove('hidden');
@@ -84,16 +77,20 @@ function gameType () {
 }
 
 document.getElementById('guess-shirt-start-btn').addEventListener('click', startGuessShirtTeam);
-document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
-
+// function to start the Guess the Shirt type game
 function startGuessShirtTeam () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
-    document.getElementById('next-btn').classList.remove('hidden');
     createQuestion();
+    displayNumberOfQuestions();
 }
 
-    function createQuestion () {shirtimage.src = quizData1[questionNumber].question;
+var questionNumber = 0;
+
+// a function that displays the shirts from the quiz array and the answers in their boxes.
+function createQuestion () {
+    
+    shirtimage.src = quizData1[questionNumber].question;
     
     quizData1[questionNumber].answers.forEach((o) => {
         document.getElementById('answer-button-1').innerText = quizData1[questionNumber].answers[0]
@@ -103,7 +100,20 @@ function startGuessShirtTeam () {
     });
 };
 
+// function that displays the total number of questions in the quiz
+function displayNumberOfQuestions() {
+    document.getElementById('number-of-qs').innerText = quizData1.length;
+}
 
+// a function that shows the current question number
+function showCurrentQuestionNumber() {
+    document.getElementById('q-number').innerText = questionNumber + 1;
+}
+
+
+
+
+document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
 
 function startGuessShirtYear () {
     document.getElementById('game-choices-container').classList.add('hidden');
