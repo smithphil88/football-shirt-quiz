@@ -61,6 +61,16 @@ body {
     cursor: pointer;
 }
 
+.answer-btns .correct {
+    background: green;
+    color: white;
+}
+
+.answer-btns .incorrect {
+    background: red;
+    color: white;
+}
+
 #game-choices-container {
     display: flex;
     justify-content: space-around;

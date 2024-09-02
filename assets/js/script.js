@@ -85,10 +85,13 @@ function startGuessShirtTeam () {
     document.getElementById('question-container').classList.remove('hidden');
     createQuestion();
     displayNumberOfQuestions();
-    questionNumber = '0';
+    showCurrentQuestionNumber();
+    questionNumber = 0;
+    userScore = 0;
 }
 
-let questionNumber = '0';
+let questionNumber = 0;
+let userScore = 0;
 
 // a function that displays the shirts from the quiz array and the answers in their boxes.
 function createQuestion () {
@@ -101,6 +104,10 @@ function createQuestion () {
         document.getElementById('answer-button-3').innerText = quizData1[questionNumber].answers[2]
         document.getElementById('answer-button-4').innerText = quizData1[questionNumber].answers[3]
     });
+    document.getElementById('answer-button-1').addEventListener('click', checkAnswer);
+    document.getElementById('answer-button-2').addEventListener('click', checkAnswer);
+    document.getElementById('answer-button-3').addEventListener('click', checkAnswer);
+    document.getElementById('answer-button-4').addEventListener('click', checkAnswer);
 };
 
 // function that displays the total number of questions in the quiz
@@ -122,6 +129,24 @@ function nextQuestion () {
     }
     questionNumber++;
     createQuestion();
+    clearAnswers();
+}
+
+function clearAnswers (){
+    document.getElementById('answer-button-1').classList.remove('correct', 'incorrect')
+    document.getElementById('answer-button-2').classList.remove('correct', 'incorrect')
+    document.getElementById('answer-button-3').classList.remove('correct', 'incorrect')
+    document.getElementById('answer-button-4').classList.remove('correct', 'incorrect')
+}
+
+function checkAnswer (e) {
+    let userAnswer = e.target.textContent;
+    if (userAnswer === quizData1[questionNumber].correct) {
+        userScore++;
+        e.target.classList.add("correct");
+    } else {
+        e.target.classList.add("incorrect");
+    }
 }
 
 function displayQuizResult() {
@@ -129,17 +154,26 @@ function displayQuizResult() {
     document.getElementById('results').classList.remove('hidden');
 }
 
-// document.getElementById('home-btn').addEventListener('click', homeButton);
 
-// function homeButton() {
-//     document.getElementById('question-container').classList.add('hidden');
-//     document.getElementById('next-choose-container').classList.add('hidden');
-//     document.getElementById('rules-container').classList.remove('hidden');
-//     document.getElementById('game-choices-container').classList.add('hidden');
-//     document.getElementById("welcome-message").textContent = ''
-//     document.getElementById("username").value = ''
-//     document.getElementById('results').classList.add('hidden');
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
 
