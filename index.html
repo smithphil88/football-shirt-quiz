@@ -9,8 +9,8 @@
 <body>
     <!--Title-->
     <header>
-        <h1 id="title">
-            <i class="fa-solid fa-futbol"></i>The Retro Football Shirt Quiz<i class="fa-solid fa-futbol"></i>
+        <h1 id="title" class="heading"><a href="index.html">
+            <i class="fa-solid fa-futbol"></i>The Retro Football Shirt Quiz<i class="fa-solid fa-futbol"></i></a>
         </h1>
     </header>
     <main>
@@ -21,7 +21,7 @@
             <p class="rules">Choose a game type - Guess the shirt or Guess the year</p>
             <p class="rules">Click an answer, choose carefully as you cannot unclick an answer</p>
             <p class="rules">Answer all questions</p>
-            <p class="rules">Click on the home button to restart</p>
+            <p class="rules">Click on the title at the top of the page to restart</p>
             <br>
             <div id="user-submit-btn">
                 <label>Enter a username</label>
@@ -76,7 +76,9 @@
             </div>
         </section>
         <section id="results" class="hidden">
-            <p>You scored...</p>
+            <div>
+                You scored...${userScore} out of 10
+            </div>
         </section>
     </main>
     <footer>
