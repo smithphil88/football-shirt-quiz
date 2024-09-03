@@ -154,6 +154,12 @@ function displayQuizResult() {
     document.getElementById('results').classList.remove('hidden');
 }
 
+document.getElementById('retake-btn').addEventListener('click', resetGame);
+
+function resetGame () {
+    
+}
+
 
 
 

@@ -57,28 +57,32 @@
         </section>
         <!--The layout of the questions, answers, scores and next question button-->
         <section id="question-container" class ="hidden">
-            <div class="score-box" >
+            <div id="score-box" class="score-box" >
                 <p>Question # <span id="q-number">1</span></p>
                 <p>Score <span id="userScore">0</span>/<span id="number-of-qs">0</span></p>
             </div>
-            <div id="question-box" >
-                <p id="question-title">Whose shirt is this?</p>
+            <div id="questions-answers">
+                <div id="question-box" >
+                    <p id="question-title">Whose shirt is this?</p>
                     <img id="shirt-image" src="">
-            </div>
-            <div class="answer-btns">
-                <button id="answer-button-1" class="answer-btn">answer 1</button>
-                <button id="answer-button-2" class="answer-btn">answer 2</button>
-                <button id="answer-button-3" class="answer-btn">answer 3</button>
-                <button id="answer-button-4" class="answer-btn">answer 4</button>
+                </div>
+                <div class="answer-btns">
+                    <button id="answer-button-1" class="answer-btn">answer 1</button>
+                    <button id="answer-button-2" class="answer-btn">answer 2</button>
+                    <button id="answer-button-3" class="answer-btn">answer 3</button>
+                    <button id="answer-button-4" class="answer-btn">answer 4</button>
+                </div>
             </div>
             <div id="next-btn-container">
                 <button id="next-btn" class="button">Next Question</button>
             </div>
         </section>
+        <!--A section that contains the results of the quiz with a personalised message informing the user how they did-->
         <section id="results" class="hidden">
-            <div>
+            <div id="results-container">
                 You scored...${userScore} out of 10
             </div>
+            <button id="retake-btn" class="button">Play again</button>
         </section>
     </main>
     <footer>
