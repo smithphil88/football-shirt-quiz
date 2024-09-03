@@ -37,11 +37,12 @@ body {
 }
 
 .rules {
-    font-size: 15px;
+    font-size: 25px;
 }
 
 #user-submit-btn {
     padding: 20px 0px;
+    font-size: 20px;
 }
 
 #next-choose-container {
@@ -84,6 +85,7 @@ body {
     text-align: center;
     width: 400px;
     padding: 10px;
+    font-size: 18px;
 }
 
 #score-box {
