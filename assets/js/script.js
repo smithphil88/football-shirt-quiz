@@ -57,6 +57,9 @@ const shirtimage = document.getElementById("shirt-image");
 const answerbtns = document.getElementsByClassName("answer-btns");
 const questionbox = document.getElementById("question-box");
 const maxquestions = 10;
+var questionNumber = 0;
+var userScore = 0;
+
 
 document.getElementById('user-submit').addEventListener('click', confirmUser);
 
@@ -86,12 +89,7 @@ function startGuessShirtTeam () {
     createQuestion();
     displayNumberOfQuestions();
     showCurrentQuestionNumber();
-    questionNumber = 0;
-    userScore = 0;
 }
-
-let questionNumber = 0;
-let userScore = 0;
 
 // a function that displays the shirts from the quiz array and the answers in their boxes.
 function createQuestion () {
@@ -130,6 +128,9 @@ function nextQuestion () {
     questionNumber++;
     createQuestion();
     clearAnswers();
+    showCurrentQuestionNumber();
+    console.log(userScore);
+    console.log(questionNumber);
 }
 
 function clearAnswers (){
