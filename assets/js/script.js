@@ -88,7 +88,6 @@ function startGuessShirtTeam () {
     document.getElementById('question-container').classList.remove('hidden');
     createQuestion();
     displayNumberOfQuestions();
-    showCurrentQuestionNumber();
 }
 
 // a function that displays the shirts from the quiz array and the answers in their boxes.
@@ -120,6 +119,7 @@ function showCurrentQuestionNumber() {
 
 document.getElementById('next-btn').addEventListener('click', nextQuestion);
 
+// a function that displays the next question
 function nextQuestion () {
     if (questionNumber >= maxquestions - 1) {
         displayQuizResult();
@@ -130,9 +130,10 @@ function nextQuestion () {
     clearAnswers();
     showCurrentQuestionNumber();
     console.log(userScore);
-    console.log(questionNumber);
 }
 
+
+// a function to clear the answers from the previous question
 function clearAnswers (){
     document.getElementById('answer-button-1').classList.remove('correct', 'incorrect')
     document.getElementById('answer-button-2').classList.remove('correct', 'incorrect')
@@ -140,11 +141,17 @@ function clearAnswers (){
     document.getElementById('answer-button-4').classList.remove('correct', 'incorrect')
 }
 
+function showUserScore () {
+    document.getElementById('userScore').innerText = userScore;
+}
+
+// a function that check whether or not an answer is correct
 function checkAnswer (e) {
     let userAnswer = e.target.textContent;
     if (userAnswer === quizData1[questionNumber].correct) {
         userScore++;
         e.target.classList.add("correct");
+        showUserScore();
     } else {
         e.target.classList.add("incorrect");
     }
