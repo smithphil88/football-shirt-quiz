@@ -1,55 +1,109 @@
 var quizData1 = [
     {
-        question: "assets/images/accrington-stanley-95-96.jpg",
+        question: "assets/images/team/accrington-stanley-95-96.jpg",
         answers: ["Accrington Stanley", "Swindon", "Rotherham", "Bristol City"],
         correct: "Accrington Stanley",
     },
     {
-        question: "assets/images/arsenal_football_shirt_91-93.jpg",
+        question: "assets/images/team/arsenal_football_shirt_91-93.jpg",
         answers: ["Arsenal", "Chelsea", "Newcastle", "Liverpool"],
         correct: "Arsenal",
     },
     {
-        question: "assets/images/AV93-95.jpg",
+        question: "assets/images/team/AV93-95.jpg",
         answers: ["West Ham", "Norwich", "Aston Villa", "Ipswich"],
         correct: "Aston Villa",
     },
     {
-        question: "assets/images/blackburn-rovers-away-football-shirt-1994-1995-s_3988_1.jpg",
+        question: "assets/images/team/blackburn-rovers-away-football-shirt-1994-1995-s_3988_1.jpg",
         answers: ["Liverpool", "Blackburn Rovers", "Manchester United", "Southampton"],
         correct: "Blackburn Rovers",
     },
     {
-        question: "assets/images/bolton-99-01.jpg",
+        question: "assets/images/team/bolton-99-01.jpg",
         answers: ["Swindon", "Bolton", "Oldham", "Wolves"],
         correct: "Bolton",
     },
     {
-        question: "assets/images/crystal-palace93-94.jpg",
+        question: "assets/images/team/crystal-palace93-94.jpg",
         answers: ["Tottenham Hotspur", "Arsenal", "Crystal Palace", "Brentford"],
         correct: "Crystal Palace",
     },
     {
-        question: "assets/images/ipswich-town92-94.jpg",
+        question: "assets/images/team/ipswich-town92-94.jpg",
         answers: ["Ipswich Town", "Chelsea", "Everton", "Manchester City"],
         correct: "Ipswich Town",
     },
     {
-        question: "assets/images/Liverpool-91-92.jpg",
+        question: "assets/images/team/Liverpool-91-92.jpg",
         answers: ["Manchester United", "Liverpool", "Arsenal", "Sheffield United"],
         correct: "Liverpool",
     },
     {
-        question: "assets/images/ManU-95-96.jpg",
+        question: "assets/images/team/ManU-95-96.jpg",
         answers: ["Leeds", "Manchester United", "Newcastle", "Bradford City"],
         correct: "Manchester United",
     },
     {
-        question: "assets/images/TH-95-96.jpg",
+        question: "assets/images/team/TH-95-96.jpg",
         answers: ["Arsenal", "Leeds", "Tottenham Hotspur", "Blackburn Rovers"],
         correct: "Tottenham Hotspur",
     },
 ];
+
+var quizData2 = [
+    {
+        question: "assets/images/year/Brazil98-00.avif",
+        answers: ["1997", "1999", "2002", "1995"],
+        correct: "1999",
+    },
+    {
+        question: "assets/images/year/Denmark-92.webp",
+        answers: ["1991", "1990", "1995", "1992"],
+        correct: "1992",
+    },
+    {
+        question: "assets/images/year/England-90.jpg",
+        answers: ["1988", "1993", "1998", "1990"],
+        correct: "1990",
+    },
+    {
+        question: "assets/images/year/Fiorentina-98-Batistuta.webp",
+        answers: ["2000", "2002", "1998", "1994"],
+        correct: "1998",
+    },
+    {
+        question: "assets/images/year/France-98-ZZ.webp",
+        answers: ["1996", "1998", "2000", "2004"],
+        correct: "1998",
+    },
+    {
+        question: "assets/images/year/Nigeria-96-Jay-Jay.webp",
+        answers: ["1996", "1994", "2000", "1990"],
+        correct: "1996",
+    },
+    {
+        question: "assets/images/year/Marcel-Desailly-AC-Milan-1993.jpg",
+        answers: ["1990", "1995", "1999", "1993"],
+        correct: "1993",
+    },
+    {
+        question: "assets/images/year/Sampdoria-91-92.jpg",
+        answers: ["1988", "1999", "1991", "1997"],
+        correct: "1991",
+    },
+    {
+        question: "assets/images/year/Scotland-98.jpg",
+        answers: ["1998", "1996", "2000", "2006"],
+        correct: "1998",
+    },
+    {
+        question: "assets/images/year/Utd-98-99.webp",
+        answers: ["1999", "2001", "1997", "2002"],
+        correct: "1999",
+    },
+];
+
 
 var username = document.getElementById("username");
 const home = document.getElementById('home');
@@ -152,7 +206,6 @@ function checkAnswer (e) {
         finalScore++;
         e.target.classList.add("correct");
         showUserScore();
-        console.log(finalScore)
     } else {
         e.target.classList.add("incorrect");
     }
@@ -200,9 +253,72 @@ function returnHome () {
 }
 
 
+
+
+
+
+// script to run the second game mode - user guesses the year the shirt is from
+
+
+var questionNumber2 = 0;
+
 document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
 
 function startGuessShirtYear () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
+    createQuestion2();
+    displayNumberOfQuestions2();
 }
+
+function createQuestion2 () {
+    
+    shirtimage.src = quizData2[questionNumber2].question;
+    
+    quizData2[questionNumber2].answers.forEach((o) => {
+        document.getElementById('answer-button-1').innerText = quizData2[questionNumber2].answers[0]
+        document.getElementById('answer-button-2').innerText = quizData2[questionNumber2].answers[1]
+        document.getElementById('answer-button-3').innerText = quizData2[questionNumber2].answers[2]
+        document.getElementById('answer-button-4').innerText = quizData2[questionNumber2].answers[3]
+    });
+    document.getElementById('answer-button-1').addEventListener('click', checkAnswer2);
+    document.getElementById('answer-button-2').addEventListener('click', checkAnswer2);
+    document.getElementById('answer-button-3').addEventListener('click', checkAnswer2);
+    document.getElementById('answer-button-4').addEventListener('click', checkAnswer2);
+};
+
+function displayNumberOfQuestions2() {
+    document.getElementById('number-of-qs').innerText = quizData2.length;
+}
+
+// a function that shows the current question number
+function showCurrentQuestionNumber2() {
+    document.getElementById('q-number').innerText = questionNumber2 + 1;
+}
+
+document.getElementById('next-btn').addEventListener('click', nextQuestion2);
+
+// a function that displays the next question
+function nextQuestion2 () {
+    if (questionNumber2 >= maxquestions - 1) {
+        displayQuizResult();
+        return;
+    }
+    questionNumber2++;
+    createQuestion2();
+    clearAnswers();
+    showCurrentQuestionNumber2();
+}
+
+function checkAnswer2 (e) {
+    let userAnswer = e.target.textContent;
+    if (userAnswer === quizData2[questionNumber2].correct) {
+        userScore++;
+        finalScore++;
+        e.target.classList.add("correct");
+        showUserScore();
+    } else {
+        e.target.classList.add("incorrect");
+    }
+}
+
