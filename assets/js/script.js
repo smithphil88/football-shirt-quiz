@@ -59,7 +59,7 @@ const questionbox = document.getElementById("question-box");
 const maxquestions = 10;
 var questionNumber = 0;
 var userScore = 0;
-
+var finalScore = 0;
 
 document.getElementById('user-submit').addEventListener('click', confirmUser);
 
@@ -129,7 +129,6 @@ function nextQuestion () {
     createQuestion();
     clearAnswers();
     showCurrentQuestionNumber();
-    console.log(userScore);
 }
 
 
@@ -150,43 +149,55 @@ function checkAnswer (e) {
     let userAnswer = e.target.textContent;
     if (userAnswer === quizData1[questionNumber].correct) {
         userScore++;
+        finalScore++;
         e.target.classList.add("correct");
         showUserScore();
+        console.log(finalScore)
     } else {
         e.target.classList.add("incorrect");
     }
 }
 
+function displayFinalNumberOfQuestions () {
+    document.getElementById('final-number-of-qs').innerText = quizData1.length;
+}
+
+function displayFinalScore () {
+    document.getElementById('final-score').innerText = finalScore;
+}
+
+function displayResultsMessage (){    
+    if (finalScore < 3) {
+        document.getElementById('results-message').innerText = "This is relegation form";
+    } else if (finalScore <= 5) {
+        document.getElementById('results-message').innerText = "You are comfortably mid-table, there's always next season";
+    } else if (finalScore <= 9) {
+        document.getElementById('results-message').innerText = "Great effort, you are pushing for the play-offs";
+    } else if (finalScore == quizData1.length) {
+        document.getElementById('results-message').innerText = "Top of the league! Champions!";
+    } else {
+        document.getElementById('results-message').innerText = "There seems to be a problem here";
+    }
+}
+
 function displayQuizResult() {
+    displayFinalNumberOfQuestions();
+    displayResultsMessage();
+    displayFinalScore();
     document.getElementById('question-container').classList.add('hidden');
     document.getElementById('results').classList.remove('hidden');
+    document.getElementById("thankyou-message").textContent = `Thanks for playing ${username}`;
 }
 
-document.getElementById('retake-btn').addEventListener('click', resetGame);
+document.getElementById('retake-btn').addEventListener('click', returnHome);
 
-function resetGame () {
-    
+function returnHome () {
+    document.getElementById('game-choices-container').classList.add('hidden');
+    document.getElementById('results').classList.add('hidden');
+    document.getElementById('question-container').classList.add('hidden');
+    document.getElementById('rules-container').classList.remove('hidden');
+    document.getElementById('username').value = '';
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);

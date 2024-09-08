@@ -158,8 +158,34 @@ body {
 }
 
 #results-container {
-    display: flex;
-    justify-content: center;
+    margin: auto;
+    width: 80%;
     font-size: 30px;
     border: solid #fff 2px;
+    text-align: center;
+}
+
+#finish-btns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10%;
+    padding-top: 50px;
+}
+
+#retake-btn {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 150px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+#back-to-game-choices {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 150px;
+    padding: 15px;
+    font-size: 20px;
 }

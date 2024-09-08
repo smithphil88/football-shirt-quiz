@@ -80,9 +80,14 @@
         <!--A section that contains the results of the quiz with a personalised message informing the user how they did-->
         <section id="results" class="hidden">
             <div id="results-container">
-                You scored...${userScore} out of 10
+                <p id="thankyou-message"></p>
+                <p id="results-message">Results</p>
+                <p>Score <span id="final-score">0</span>/<span id="final-number-of-qs">0</span></p>
             </div>
-            <button id="retake-btn" class="button">Play again</button>
+            <div id="finish-btns">
+                <button id="retake-btn" class="button">Go to the home screen</button>
+                <button id="back-to-game-choices" class="button">Go back to the game choices screen</button>
+            </div>
         </section>
     </main>
     <footer>
