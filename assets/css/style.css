@@ -12,6 +12,7 @@ body {
     text-align: center;
     margin: 0;
     padding-bottom: 10px;
+    border: solid #fff 5px;
 }
 
 #home-btn {
@@ -28,7 +29,7 @@ body {
 #rules-container {
     margin: auto;
     width: 50%;
-    border: solid #fff 2px;
+    border: solid #fff 5px;
     text-align: center;
 }
 

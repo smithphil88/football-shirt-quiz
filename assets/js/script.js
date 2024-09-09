@@ -144,6 +144,14 @@ function startGuessShirtTeam () {
     displayNumberOfQuestions();
 }
 
+
+// a method to shuffle the question so they do not appear in the same order
+const shuffleArray = (array) => {
+    return array.slice().sort(() => Math.random() - 0.5);
+}
+
+quizData1 = shuffleArray(quizData1);
+
 // a function that displays the shirts from the quiz array and the answers in their boxes.
 function createQuestion () {
     
@@ -198,11 +206,13 @@ function clearAnswers (){
     document.getElementById('answer-button-4').classList.remove('correct', 'incorrect')
 }
 
+
+// the function that displays the current score the user has
 function showUserScore () {
     document.getElementById('userScore').innerText = userScore;
 }
 
-// a function that check whether or not an answer is correct
+// a function that check whether or not an answer is correct and to disable the other options
 function checkAnswer (e) {
     let userAnswer = e.target.textContent;
     if (userAnswer === quizData1[questionNumber].correct) {
@@ -260,11 +270,6 @@ function returnHome () {
     document.getElementById('rules-container').classList.remove('hidden');
     document.getElementById('username').value = '';
 }
-
-
-
-
-
 
 // script to run the second game mode - user guesses the year the shirt is from
 
