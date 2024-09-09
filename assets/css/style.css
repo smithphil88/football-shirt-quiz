@@ -75,6 +75,10 @@ body {
     color: white;
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 #game-choices-container {
     display: flex;
     justify-content: space-around;
