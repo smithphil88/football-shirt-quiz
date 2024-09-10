@@ -155,6 +155,11 @@ quizData1 = shuffleArray(quizData1);
 // a function that displays the shirts from the quiz array and the answers in their boxes.
 function createQuestion () {
     
+var questionTitle = document.getElementById('question-title');
+var questionText = document.createTextNode('Whose shirt is this?');
+
+questionTitle.appendChild(questionText);
+
     shirtimage.src = quizData1[questionNumber].question;
     
     quizData1[questionNumber].answers.forEach((o) => {
@@ -269,75 +274,15 @@ function returnHome () {
     document.getElementById('question-container').classList.add('hidden');
     document.getElementById('rules-container').classList.remove('hidden');
     document.getElementById('username').value = '';
+    confirmUser();
 }
 
-// script to run the second game mode - user guesses the year the shirt is from
+//script to run the second game mode - user guesses the year the shirt is from
 
+document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
 
-// var questionNumber2 = 0;
-// var userScore2 = 0;
-// var finalScore2 = 0;
+function startGuessShirtYear () {
+    document.getElementById('game-choices-container').classList.add('hidden');
+    document.getElementById('question-container').classList.remove('hidden');
+}
 
-// document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
-
-// function startGuessShirtYear () {
-//     document.getElementById('game-choices-container').classList.add('hidden');
-//     document.getElementById('question-container').classList.remove('hidden');
-//     createQuestion2();
-//     displayNumberOfQuestions2();
-// }
-
-// function createQuestion2 () {
-    
-//     shirtimage.src = quizData2[questionNumber2].question;
-    
-//     quizData2[questionNumber2].answers.forEach((o) => {
-//         document.getElementById('answer-button-1').innerText = quizData2[questionNumber2].answers[0]
-//         document.getElementById('answer-button-2').innerText = quizData2[questionNumber2].answers[1]
-//         document.getElementById('answer-button-3').innerText = quizData2[questionNumber2].answers[2]
-//         document.getElementById('answer-button-4').innerText = quizData2[questionNumber2].answers[3]
-//     });
-//     document.getElementById('answer-button-1').addEventListener('click', checkAnswer2);
-//     document.getElementById('answer-button-2').addEventListener('click', checkAnswer2);
-//     document.getElementById('answer-button-3').addEventListener('click', checkAnswer2);
-//     document.getElementById('answer-button-4').addEventListener('click', checkAnswer2);
-// };
-
-// function displayNumberOfQuestions2() {
-//     document.getElementById('number-of-qs').innerText = quizData2.length;
-// }
-
-// // a function that shows the current question number
-// function showCurrentQuestionNumber2() {
-//     document.getElementById('q-number').innerText = questionNumber2 + 1;
-// }
-
-// document.getElementById('next-btn').addEventListener('click', nextQuestion2);
-
-// // a function that displays the next question
-// function nextQuestion2 () {
-//     if (questionNumber2 >= maxquestions - 1) {
-//         displayQuizResult();
-//         return;
-//     }
-//     questionNumber2++;
-//     createQuestion2();
-//     clearAnswers();
-//     showCurrentQuestionNumber2();
-// }
-
-// function checkAnswer2 (e2) {
-//     let userAnswer2 = e2.target.textContent;
-//     if (userAnswer2 === quizData2[questionNumber2].correct) {
-//         userScore2++;
-//         finalScore2++;
-//         e2.target.classList.add("correct");
-//         showUserScore2();
-//     } else {
-//         e2.target.classList.add("incorrect");
-//     }
-// }
-
-// function showUserScore2 () {
-//     document.getElementById('userScore').innerText = userScore2;
-// }
