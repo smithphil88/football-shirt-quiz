@@ -171,19 +171,19 @@ body {
 }
 
 #finish-btns{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 10%;
-    padding-top: 50px;
+    margin: auto;
 }
 
 #retake-btn {
-    display: block;
     margin: auto;
     width: 400px;
     height: 150px;
     padding: 15px;
     font-size: 20px;
+}
+
+#retake-btn-link {
+    text-decoration: none;
 }
 
 #back-to-game-choices {

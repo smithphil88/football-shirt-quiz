@@ -154,11 +154,6 @@ quizData1 = shuffleArray(quizData1);
 
 // a function that displays the shirts from the quiz array and the answers in their boxes.
 function createQuestion () {
-    
-var questionTitle = document.getElementById('question-title');
-var questionText = document.createTextNode('Whose shirt is this?');
-
-questionTitle.appendChild(questionText);
 
     shirtimage.src = quizData1[questionNumber].question;
     
@@ -173,6 +168,13 @@ questionTitle.appendChild(questionText);
     document.getElementById('answer-button-3').addEventListener('click', checkAnswer);
     document.getElementById('answer-button-4').addEventListener('click', checkAnswer);
 };
+
+// function displayQuestionTitle () {
+//     var questionTitle = document.getElementById('question-title');
+//     var questionText = document.createTextNode('Whose shirt is this?');
+
+//     questionTitle.appendChild(questionText);
+// }
 
 // function that displays the total number of questions in the quiz
 function displayNumberOfQuestions() {
@@ -264,17 +266,6 @@ function displayQuizResult() {
     document.getElementById('question-container').classList.add('hidden');
     document.getElementById('results').classList.remove('hidden');
     document.getElementById("thankyou-message").textContent = `Thanks for playing ${username}`;
-}
-
-document.getElementById('retake-btn').addEventListener('click', returnHome);
-
-function returnHome () {
-    document.getElementById('game-choices-container').classList.add('hidden');
-    document.getElementById('results').classList.add('hidden');
-    document.getElementById('question-container').classList.add('hidden');
-    document.getElementById('rules-container').classList.remove('hidden');
-    document.getElementById('username').value = '';
-    confirmUser();
 }
 
 //script to run the second game mode - user guesses the year the shirt is from
