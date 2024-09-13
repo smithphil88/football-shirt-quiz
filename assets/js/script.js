@@ -133,7 +133,7 @@ function gameType () {
     document.getElementById('rules-container').classList.add('hidden');
     document.getElementById('game-choices-container').classList.remove('hidden');
     document.getElementById('game-choices-btn').classList.add('hidden');
-}
+};
 
 document.getElementById('guess-shirt-start-btn').addEventListener('click', startGuessShirtTeam);
 // function to start the Guess the Shirt type game
@@ -144,7 +144,6 @@ function startGuessShirtTeam () {
     displayNumberOfQuestions();
 }
 
-
 // a method to shuffle the question so they do not appear in the same order
 const shuffleArray = (array) => {
     return array.slice().sort(() => Math.random() - 0.5);
@@ -154,6 +153,8 @@ quizData1 = shuffleArray(quizData1);
 
 // a function that displays the shirts from the quiz array and the answers in their boxes.
 function createQuestion () {
+
+    displayQuestionTitle();
 
     shirtimage.src = quizData1[questionNumber].question;
     
@@ -169,12 +170,18 @@ function createQuestion () {
     document.getElementById('answer-button-4').addEventListener('click', checkAnswer);
 };
 
-// function displayQuestionTitle () {
-//     var questionTitle = document.getElementById('question-title');
-//     var questionText = document.createTextNode('Whose shirt is this?');
+// a function that displays a unique question for this particular game choice
+function displayQuestionTitle () {
+    var questionTitle = document.getElementById('question-title');
+    var questionText = document.createTextNode('Whose shirt is this?');
 
-//     questionTitle.appendChild(questionText);
-// }
+    questionTitle.appendChild(questionText);
+}
+
+// a function that clears the previous question so it does not repeat
+function clearQuestionTitle () {
+    document.getElementById('question-title').innerHTML = '';
+}
 
 // function that displays the total number of questions in the quiz
 function displayNumberOfQuestions() {
@@ -199,11 +206,11 @@ function nextQuestion () {
         return;
     }
     questionNumber++;
+    clearQuestionTitle();
     createQuestion();
     clearAnswers();
     showCurrentQuestionNumber();
 }
-
 
 // a function to clear the answers from the previous question
 function clearAnswers (){
@@ -212,7 +219,6 @@ function clearAnswers (){
     document.getElementById('answer-button-3').classList.remove('correct', 'incorrect')
     document.getElementById('answer-button-4').classList.remove('correct', 'incorrect')
 }
-
 
 // the function that displays the current score the user has
 function showUserScore () {
@@ -236,6 +242,13 @@ function checkAnswer (e) {
         o.classList.add('disabled')
     });
 };
+
+function showCorrectAnswer (e){
+    let userAnswer = e.target.textContent;
+    if (userAnswer === quizData1[questionNumber].incorrect) {
+        
+    }
+}
 
 function displayFinalNumberOfQuestions () {
     document.getElementById('final-number-of-qs').innerText = quizData1.length;
@@ -268,12 +281,146 @@ function displayQuizResult() {
     document.getElementById("thankyou-message").textContent = `Thanks for playing ${username}`;
 }
 
+
+
 //script to run the second game mode - user guesses the year the shirt is from
 
-document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
+// document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
 
-function startGuessShirtYear () {
-    document.getElementById('game-choices-container').classList.add('hidden');
-    document.getElementById('question-container').classList.remove('hidden');
-}
+// function startGuessShirtYear () {
+//     document.getElementById('game-choices-container').classList.add('hidden');
+//     document.getElementById('question-container').classList.remove('hidden');
+//     createQuestion2();
+//     displayNumberOfQuestions2();
+// };
 
+// // a method to shuffle the question so they do not appear in the same order
+// const shuffleArray2 = (array) => {
+//     return array.slice().sort(() => Math.random() - 0.5);
+// }
+
+// quizData2 = shuffleArray(quizData2);
+
+// // a function that displays the shirts from the quiz array and the answers in their boxes.
+// function createQuestion2 () {
+
+//     displayQuestionTitle2();
+
+//     shirtimage.src = quizData2[questionNumber].question;
+    
+//     quizData2[questionNumber].answers.forEach((o) => {
+//         document.getElementById('answer-button-1').innerText = quizData2[questionNumber].answers[0]
+//         document.getElementById('answer-button-2').innerText = quizData2[questionNumber].answers[1]
+//         document.getElementById('answer-button-3').innerText = quizData2[questionNumber].answers[2]
+//         document.getElementById('answer-button-4').innerText = quizData2[questionNumber].answers[3]
+//     });
+//     document.getElementById('answer-button-1').addEventListener('click', checkAnswer2);
+//     document.getElementById('answer-button-2').addEventListener('click', checkAnswer2);
+//     document.getElementById('answer-button-3').addEventListener('click', checkAnswer2);
+//     document.getElementById('answer-button-4').addEventListener('click', checkAnswer2);
+// };
+
+// // a function that displays a unique question for this particular game choice
+// function displayQuestionTitle2 () {
+//     var questionTitle = document.getElementById('question-title');
+//     var questionText = document.createTextNode('What year was this worn?');
+
+//     questionTitle.appendChild(questionText);
+// }
+
+
+// // a function that clears the previous question so it does not repeat
+// function clearQuestionTitle2 () {
+//     document.getElementById('question-title').innerHTML = '';
+// }
+
+// // function that displays the total number of questions in the quiz
+// function displayNumberOfQuestions2() {
+//     document.getElementById('number-of-qs').innerText = quizData2.length;
+// };
+
+// // a function that shows the current question number
+// function showCurrentQuestionNumber2() {
+//     document.getElementById('q-number').innerText = questionNumber + 1;
+// };
+
+// document.getElementById('next-btn').addEventListener('click', nextQuestion2);
+
+// // a function that displays the next question
+// function nextQuestion2 () {
+//     let allAnswers2 = document.querySelectorAll('.answer-btns');
+//     allAnswers2.forEach((option) => {
+//         option.classList.remove('disabled')
+//     });
+//     if (questionNumber >= maxquestions - 1) {
+//         displayQuizResult2();
+//         return;
+//     }
+//     questionNumber++;
+//     clearQuestionTitle2();
+//     createQuestion2();
+//     clearAnswers2();
+//     showCurrentQuestionNumber2();
+// };
+
+// // a function to clear the answers from the previous question
+// function clearAnswers2 (){
+//     document.getElementById('answer-button-1').classList.remove('correct', 'incorrect')
+//     document.getElementById('answer-button-2').classList.remove('correct', 'incorrect')
+//     document.getElementById('answer-button-3').classList.remove('correct', 'incorrect')
+//     document.getElementById('answer-button-4').classList.remove('correct', 'incorrect')
+// };
+
+// // the function that displays the current score the user has
+// function showUserScore2 () {
+//     document.getElementById('userScore').innerText = userScore;
+// };
+
+// // a function that check whether or not an answer is correct and to disable the other options
+// function checkAnswer2 (event) {
+//     let userAnswer2 = event.target.textContent;
+//     if (userAnswer2 === quizData2[questionNumber].correct) {
+//         userScore++;
+//         finalScore++;
+//         event.target.classList.add("correct");
+//         showUserScore2();
+//     } else {
+//         event.target.classList.add("incorrect");
+//     }
+
+//     let allAnswers2 = document.querySelectorAll('.answer-btns');
+//     allAnswers2.forEach((option) => {
+//         option.classList.add('disabled')
+//     });
+// };
+
+// function displayFinalNumberOfQuestions2 () {
+//     document.getElementById('final-number-of-qs').innerText = quizData2.length;
+// };
+
+// function displayFinalScore2 () {
+//     document.getElementById('final-score').innerText = finalScore;
+// };
+
+// function displayResultsMessage2 (){    
+//     if (finalScore < 3) {
+//         document.getElementById('results-message').innerText = "This is relegation form";
+//     } else if (finalScore <= 5) {
+//         document.getElementById('results-message').innerText = "You are comfortably mid-table, there's always next season";
+//     } else if (finalScore <= 9) {
+//         document.getElementById('results-message').innerText = "Great effort, you are pushing for the play-offs";
+//     } else if (finalScore == quizData2.length) {
+//         document.getElementById('results-message').innerText = "Top of the league! Champions!";
+//     } else {
+//         document.getElementById('results-message').innerText = "There seems to be a problem here";
+//     }
+// };
+
+// function displayQuizResult2() {
+//     displayFinalNumberOfQuestions2();
+//     displayResultsMessage2();
+//     displayFinalScore2();
+//     document.getElementById('question-container').classList.add('hidden');
+//     document.getElementById('results').classList.remove('hidden');
+//     document.getElementById("thankyou-message").textContent = `Thanks for playing ${username}`;
+// };

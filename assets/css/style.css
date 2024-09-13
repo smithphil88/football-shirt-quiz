@@ -170,13 +170,14 @@ body {
     text-align: center;
 }
 
-#finish-btns{
+#finish-btns {
     margin: auto;
+    width:30%;
+    text-align: center;
+    padding-top: 20px;
 }
 
 #retake-btn {
-    margin: auto;
-    width: 400px;
     height: 150px;
     padding: 15px;
     font-size: 20px;
@@ -184,13 +185,4 @@ body {
 
 #retake-btn-link {
     text-decoration: none;
-}
-
-#back-to-game-choices {
-    display: block;
-    margin: auto;
-    width: 400px;
-    height: 150px;
-    padding: 15px;
-    font-size: 20px;
 }
