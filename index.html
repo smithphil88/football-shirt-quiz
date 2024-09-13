@@ -9,7 +9,7 @@
 <body>
     <!--Title-->
     <header>
-        <h1 id="title" class="heading"><a href="index.html">
+        <h1 id="title" class="heading"><a href="index.html" aria-label="Takes you to initial landing page">
             <i class="fa-solid fa-futbol"></i>The Retro Football Shirt Quiz<i class="fa-solid fa-futbol"></i></a>
         </h1>
     </header>
@@ -42,7 +42,7 @@
                 <h2>Guess the Shirt</h2>
                 <p>You will be shown a 'famous' football shirt from the past 40 years...or so.</p>
                 <p>All you have to do is select the correct answer from four potential teams</p>
-                <p>This is the 'easy' mode - continue if you know about the infamous 'grey' kit at the Dell.</p>
+                <p>This is the 'easy' mode - continue if you have some knowledge of 90's football shirts</p>
                 <p>Good luck!</p>
                 <button id="guess-shirt-start-btn" class="button">Start</button>
             </div>
@@ -64,7 +64,7 @@
             <div id="questions-answers">
                 <div id="question-box" >
                     <p id="question-title"></p>
-                    <img id="shirt-image" src="">
+                    <img id="shirt-image" src="" alt="a football shirt">
                 </div>
                 <div class="answer-btns">
                     <button id="answer-button-1" class="answer-btn">answer 1</button>
@@ -81,11 +81,11 @@
         <section id="results" class="hidden">
             <div id="results-container">
                 <p id="thankyou-message"></p>
-                <p id="results-message">Results</p>
+                <p id="results-message"></p>
                 <p>Score <span id="final-score">0</span>/<span id="final-number-of-qs">0</span></p>
             </div>
             <div id="finish-btns">
-                <a id="retake-btn-link" href="index.html"><button id="retake-btn" class="button">Go to the home screen</button></a>
+                <a id="retake-btn-link" href="index.html" aria-label="Takes you to initial landing page"><button id="retake-btn" class="button">Go to the home screen</button></a>
             </div>
         </section>
     </main>

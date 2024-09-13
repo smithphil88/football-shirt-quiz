@@ -119,9 +119,12 @@ document.getElementById('user-submit').addEventListener('click', confirmUser);
 
 // a function that requires the user to enter in a username
 function confirmUser () {
-    if (document.getElementById("username").value === ''){
+    var username = document.getElementById("username");
+    if (username.value === ''){
         alert('Please enter a name');
-    } else {
+    } else if (username.value.length >= 20){
+        alert('Your username cannot be over 20 characters');
+    } else  {
     username = document.getElementById("username").value;
     document.getElementById("welcome-message").textContent = `Welcome ${username}, are you ready to play? Click the button below to choose your game mode.`
     document.getElementById('next-choose-container').classList.remove('hidden');
