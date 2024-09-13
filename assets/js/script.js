@@ -104,7 +104,6 @@ var quizData2 = [
     },
 ];
 
-
 var username = document.getElementById("username");
 const home = document.getElementById('home');
 const shirtimage = document.getElementById("shirt-image");
@@ -181,7 +180,7 @@ function displayQuestionTitle () {
     questionTitle.appendChild(questionText);
 }
 
-// a function that clears the previous question so it does not repeat
+// a function that clears the previous question so it does not repeat over and over again
 function clearQuestionTitle () {
     document.getElementById('question-title').innerHTML = '';
 }
@@ -246,21 +245,27 @@ function checkAnswer (e) {
     });
 };
 
-function showCorrectAnswer (e){
-    let userAnswer = e.target.textContent;
-    if (userAnswer === quizData1[questionNumber].incorrect) {
+// a function to show the correct answer if the user selects wrong answer
+// function showCorrectAnswer (e){
+//     let userAnswer = e.target.textContent;
+//     if (userAnswer === quizData1[questionNumber].incorrect) {
         
-    }
-}
+//     }
+// }
 
+
+// A function that displays the final amount of questions in the results container
 function displayFinalNumberOfQuestions () {
     document.getElementById('final-number-of-qs').innerText = quizData1.length;
 }
 
+
+// A function that displays the users final score in the results container
 function displayFinalScore () {
     document.getElementById('final-score').innerText = finalScore;
 }
 
+// A function that displays a different results messgae which is dependant on the score that the user got
 function displayResultsMessage (){    
     if (finalScore < 3) {
         document.getElementById('results-message').innerText = "This is relegation form";
@@ -275,6 +280,7 @@ function displayResultsMessage (){
     }
 }
 
+// This function is called when the user has gone through all of the possible questions
 function displayQuizResult() {
     displayFinalNumberOfQuestions();
     displayResultsMessage();
