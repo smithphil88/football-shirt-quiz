@@ -1,4 +1,4 @@
-var quizData1 = [
+let quizData1 = [
     {
         question: "assets/images/team/accrington-stanley-95-96.jpg",
         answers: ["Accrington Stanley", "Swindon", "Rotherham", "Bristol City"],
@@ -51,7 +51,7 @@ var quizData1 = [
     },
 ];
 
-var quizData2 = [
+let quizData2 = [
     {
         question: "assets/images/year/Brazil98-00.avif",
         answers: ["1997", "1999", "2002", "1995"],
@@ -104,21 +104,20 @@ var quizData2 = [
     },
 ];
 
-var username = document.getElementById("username");
+let username = document.getElementById("username");
 const home = document.getElementById('home');
 const shirtimage = document.getElementById("shirt-image");
 const answerbtns = document.getElementsByClassName("answer-btns");
 const questionbox = document.getElementById("question-box");
 const maxquestions = 10;
-var questionNumber = 0;
-var userScore = 0;
-var finalScore = 0;
+let questionNumber = 0;
+let userScore = 0;
+let finalScore = 0;
 
 document.getElementById('user-submit').addEventListener('click', confirmUser);
 
 // a function that requires the user to enter in a username
 function confirmUser () {
-    var username = document.getElementById("username");
     if (username.value === ''){
         alert('Please enter a name');
     } else if (username.value.length >= 20){
@@ -149,8 +148,7 @@ function startGuessShirtTeam () {
 // a method to shuffle the question so they do not appear in the same order
 const shuffleArray = (array) => {
     return array.slice().sort(() => Math.random() - 0.5);
-}
-
+};
 quizData1 = shuffleArray(quizData1);
 
 // a function that displays the shirts from the quiz array and the answers in their boxes.
@@ -174,8 +172,8 @@ function createQuestion () {
 
 // a function that displays a unique question for this particular game choice
 function displayQuestionTitle () {
-    var questionTitle = document.getElementById('question-title');
-    var questionText = document.createTextNode('Whose shirt is this?');
+    let questionTitle = document.getElementById('question-title');
+    let questionText = document.createTextNode('Whose shirt is this?');
 
     questionTitle.appendChild(questionText);
 }
@@ -253,12 +251,10 @@ function checkAnswer (e) {
 //     }
 // }
 
-
 // A function that displays the final amount of questions in the results container
 function displayFinalNumberOfQuestions () {
     document.getElementById('final-number-of-qs').innerText = quizData1.length;
 }
-
 
 // A function that displays the users final score in the results container
 function displayFinalScore () {
@@ -331,8 +327,8 @@ function displayQuizResult() {
 
 // // a function that displays a unique question for this particular game choice
 // function displayQuestionTitle2 () {
-//     var questionTitle = document.getElementById('question-title');
-//     var questionText = document.createTextNode('What year was this worn?');
+//     let questionTitle = document.getElementById('question-title');
+//     let questionText = document.createTextNode('What year was this worn?');
 
 //     questionTitle.appendChild(questionText);
 // }
