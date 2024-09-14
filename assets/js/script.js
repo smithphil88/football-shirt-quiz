@@ -106,10 +106,10 @@ let quizData2 = [
 
 let username = document.getElementById("username");
 const home = document.getElementById('home');
-const shirtimage = document.getElementById("shirt-image");
-const answerbtns = document.getElementsByClassName("answer-btns");
-const questionbox = document.getElementById("question-box");
-const maxquestions = 10;
+const shirtImage = document.getElementById("shirt-image");
+const answerBtns = document.getElementsByClassName("answer-btns");
+const questionBox = document.getElementById("question-box");
+const maxQuestions = 10;
 let questionNumber = 0;
 let userScore = 0;
 let finalScore = 0;
@@ -145,7 +145,7 @@ function startGuessShirtTeam () {
     displayNumberOfQuestions();
 }
 
-// a method to shuffle the question so they do not appear in the same order
+// // a method to shuffle the question so they do not appear in the same order
 const shuffleArray = (array) => {
     return array.slice().sort(() => Math.random() - 0.5);
 };
@@ -156,7 +156,7 @@ function createQuestion () {
 
     displayQuestionTitle();
 
-    shirtimage.src = quizData1[questionNumber].question;
+    shirtImage.src = quizData1[questionNumber].question;
     
     quizData1[questionNumber].answers.forEach((o) => {
         document.getElementById('answer-button-1').innerText = quizData1[questionNumber].answers[0]
@@ -201,11 +201,12 @@ function nextQuestion () {
     allAnswers.forEach((o) => {
         o.classList.remove('disabled')
     });
-    if (questionNumber >= maxquestions - 1) {
+    if (questionNumber >= maxQuestions - 1) {
         displayQuizResult();
         return;
     }
     questionNumber++;
+    clearCorrectAnswer();
     clearQuestionTitle();
     createQuestion();
     clearAnswers();
@@ -235,6 +236,10 @@ function checkAnswer (e) {
         showUserScore();
     } else {
         e.target.classList.add("incorrect");
+        let correct = document.getElementById('correct-answer');
+        let correctAnswer = document.createTextNode(`Sorry the answer is ${quizData1[questionNumber].correct}`);
+
+    correct.appendChild(correctAnswer);
     }
 
     let allAnswers = document.querySelectorAll('.answer-btns');
@@ -243,13 +248,9 @@ function checkAnswer (e) {
     });
 };
 
-// a function to show the correct answer if the user selects wrong answer
-// function showCorrectAnswer (e){
-//     let userAnswer = e.target.textContent;
-//     if (userAnswer === quizData1[questionNumber].incorrect) {
-        
-//     }
-// }
+function clearCorrectAnswer () {
+    document.getElementById('correct-answer').innerHTML = '';
+}
 
 // A function that displays the final amount of questions in the results container
 function displayFinalNumberOfQuestions () {

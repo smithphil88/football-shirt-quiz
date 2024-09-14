@@ -162,6 +162,11 @@ body {
     border: solid #fff 2px;
 }
 
+#correct-answer {
+    text-align: center;
+    font-size: 20px;
+}
+
 #results-container {
     margin: auto;
     width: 80%;
