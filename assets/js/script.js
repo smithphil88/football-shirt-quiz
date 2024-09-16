@@ -35,7 +35,7 @@ let quizData1 = [
         correct: "Ipswich Town",
     },
     {
-        question: "assets/images/team/liverpool-91-92.webp",
+        question: "assets/images/team/liverpool.webp",
         answers: ["Manchester United", "Liverpool", "Arsenal", "Sheffield United"],
         correct: "Liverpool",
     },
