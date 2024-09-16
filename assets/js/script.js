@@ -1,51 +1,51 @@
 let quizData1 = [
     {
-        question: "assets/images/team/accrington-stanley-95-96.jpg",
+        question: "assets/images/team/accrington-stanley-95-96.webp",
         answers: ["Accrington Stanley", "Swindon", "Rotherham", "Bristol City"],
         correct: "Accrington Stanley",
     },
     {
-        question: "assets/images/team/arsenal_football_shirt_91-93.jpg",
+        question: "assets/images/team/arsenal_football_shirt_91-93.webp",
         answers: ["Arsenal", "Chelsea", "Newcastle", "Liverpool"],
         correct: "Arsenal",
     },
     {
-        question: "assets/images/team/AV93-95.jpg",
+        question: "assets/images/team/av-93-95.webp",
         answers: ["West Ham", "Norwich", "Aston Villa", "Ipswich"],
         correct: "Aston Villa",
     },
     {
-        question: "assets/images/team/blackburn-rovers-away-football-shirt-1994-1995-s_3988_1.jpg",
+        question: "assets/images/team/blackburn-rovers-1994-1995.webp",
         answers: ["Liverpool", "Blackburn Rovers", "Manchester United", "Southampton"],
         correct: "Blackburn Rovers",
     },
     {
-        question: "assets/images/team/bolton-99-01.jpg",
+        question: "assets/images/team/bolton-99-01.webp",
         answers: ["Swindon", "Bolton", "Oldham", "Wolves"],
         correct: "Bolton",
     },
     {
-        question: "assets/images/team/crystal-palace93-94.jpg",
+        question: "assets/images/team/crystal-palace93-94.webp",
         answers: ["Tottenham Hotspur", "Arsenal", "Crystal Palace", "Brentford"],
         correct: "Crystal Palace",
     },
     {
-        question: "assets/images/team/ipswich-town92-94.jpg",
+        question: "assets/images/team/ipswich-town92-94.webp",
         answers: ["Ipswich Town", "Chelsea", "Everton", "Manchester City"],
         correct: "Ipswich Town",
     },
     {
-        question: "assets/images/team/Liverpool-91-92.jpg",
+        question: "assets/images/team/liverpool-91-92.webp",
         answers: ["Manchester United", "Liverpool", "Arsenal", "Sheffield United"],
         correct: "Liverpool",
     },
     {
-        question: "assets/images/team/ManU-95-96.jpg",
+        question: "assets/images/team/manutd-95-96.webp",
         answers: ["Leeds", "Manchester United", "Newcastle", "Bradford City"],
         correct: "Manchester United",
     },
     {
-        question: "assets/images/team/TH-95-96.jpg",
+        question: "assets/images/team/tot-95-96.webp",
         answers: ["Arsenal", "Leeds", "Tottenham Hotspur", "Blackburn Rovers"],
         correct: "Tottenham Hotspur",
     },
