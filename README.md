@@ -3,15 +3,20 @@
 ## Table of Contents
 
 - [Introduction] (#introduction)
-- [User Stories] (#user-stories)
+- [User-Stories] (#user-stories)
 - [Design] (#design)
+- [Features] (#features)
+- [Languages] (#languages)
+- [Testing] (#testing)
+- [Deployment] (#deployment)
+- [Bugs] (#bugs)
+- [Credits] (#credits)
 
 ## Introduction
 
 This website is designed for entertainment purposes. It consists of two different quizzes, which follow similar themes - old football shirts. The quiz has been created on one HTML page, with new features appearing as the user navigates through the site.
 
-## User Stories
-
+## User-Stories
 
 ### First-time users
 
@@ -46,6 +51,10 @@ The font chosen is SilkScreen with a back-up font of Sans-serif in case of a loa
 
 The images for the quiz were taken from a variety of sporting websites - see credits for more details. All images have been resized before adding to the site to ensure efficient formatting.
 
+### Wireframes
+
+The following wireframes were produced at the start of the design process and have not been altered.
+
 ## Features 
 
 ### Landing page title
@@ -61,6 +70,29 @@ The images for the quiz were taken from a variety of sporting websites - see cre
 - The user must enter a username into the input field in order to continue.
 - If the user tries to procedd without a username then an alert will pop up.
 - To protect against any potential username crashes, usernames are limited to 20 characters.
+- Once the username has passed the validation a button appears, prompting the user to the next screen.
+
+### Game choice selection 
+
+- In this section the user has the option to select a game type.
+- One game type is considered the 'easy' mode, where they have to guess the team the shirt belongs to.
+- In this section the rules of both modes are explained.
+- The other game mode is considered a harder mode, where the user needs to guess the year the photo was taken.
+- Once the rules have been read the user may select an option.
+
+### Quiz screen
+
+- This is the main part of the quiz, where the question number, user score, out of how many questions, the question and image, four answer buttons and the next question button appear.
+- As the user progress through the question, navigating using the 'next question' button the question number will increment.
+- If a user is successful in their answer the userscore is incremented too.
+- If a user is unsuccessful then a sentence appears, informing the user of the correct answer.
+
+### Results screen
+
+- In this section a container displays the users final score out of however many questions there are in the dataset.
+- A unique written message containing their username appears thanking the user for playing.
+- An if statement was written to show different messages depending on the score the user had.
+- Once a user has completed the quiz, a button is there to take the user back to the landing page.
 
 
 
