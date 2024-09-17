@@ -106,6 +106,7 @@ footer {
     border-radius: 3px;
     cursor: pointer;
     border: solid #fff 2px;
+    font-size: 15px;
 }
 
 .button:hover {

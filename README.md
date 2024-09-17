@@ -2,15 +2,15 @@
 
 ## Table of Contents
 
-- [Introduction] (#introduction)
-- [User-Stories] (#user-stories)
-- [Design] (#design)
-- [Features] (#features)
-- [Languages] (#languages)
-- [Testing] (#testing)
-- [Deployment] (#deployment)
-- [Bugs] (#bugs)
-- [Credits] (#credits)
+- [Introduction](#introduction)
+- [User-Stories](#user-stories)
+- [Design](#design)
+- [Features](#features)
+- [Languages](#languages)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Bugs](#bugs)
+- [Credits](#credits)
 
 ## Introduction
 
@@ -53,7 +53,28 @@ The images for the quiz were taken from a variety of sporting websites - see cre
 
 ### Wireframes
 
-The following wireframes were produced at the start of the design process and have not been altered.
+The following wireframes were produced at the start of the design process and have not been altered. These designs show the various screens I wanted to include.
+
+#### Landing page
+
+![Landing-Page](documentation/wireframes/landing-page.png)
+
+#### Game choice screen
+
+![Game-Choice-Screen](documentation/wireframes/game-choice-screen.png)
+
+#### Quiz 1
+
+![Quiz-1](documentation/wireframes/quiz1.png)
+
+#### Quiz 2
+
+![Quiz-2](documentation/wireframes/quiz2.png)
+
+#### Results screen 
+
+![Results](documentation/wireframes/results-screen.png)
+
 
 ## Features 
 
