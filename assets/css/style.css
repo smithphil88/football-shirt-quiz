@@ -10,6 +10,8 @@ body {
     flex-direction: column;
 }
 
+/* title style */
+
 #title {
     font-size: 50px;
     text-align: center;
@@ -28,6 +30,7 @@ body {
     text-decoration: none;
     color:#fff;
 }
+/* stylings of the footer section, that appears on the screen at all times */
 
 footer {
     height: auto;
@@ -59,6 +62,7 @@ footer {
 }
 
 /*Stylings for the rules page*/
+
 #rules-container {
     margin: auto;
     width: 50%;
@@ -86,9 +90,14 @@ footer {
     padding-top: 20px;
 }
 
+
+/* a class styling that allows content to be hidden */
+
 .hidden {
     display: none !important;
 }
+
+/* the main styling for all none answer buttons throughout the site */
 
 .button {
     font-family: Silkscreen;
@@ -100,7 +109,8 @@ footer {
 }
 
 .button:hover {
-    background: rgb(230, 230, 0);
+    background: black;
+    color: yellow;
 }
 
 .answer-btns .correct {
@@ -117,6 +127,8 @@ footer {
     pointer-events: none;
 }
 
+/* styling the game choice selection screen */
+
 #game-choices-container {
     display: flex;
     justify-content: space-around;
@@ -127,8 +139,10 @@ footer {
     text-align: center;
     width: 400px;
     padding: 10px;
-    font-size: 18px;
+    font-size: 24px;
 }
+
+/* stylings of the score box */
 
 #score-box {
     display: block;
@@ -136,10 +150,12 @@ footer {
     border: solid #fff 2px;
     width: 500px;
     margin: auto;
-    font-size: 25px;
+    font-size: 20px;
     background-color: rgb(0, 110, 255);
     color: #fff;
 }
+
+/* styling the question, the image and the answer buttons */
 
 #questions-answers {
     display: grid;
@@ -178,14 +194,19 @@ footer {
 }
 
 .answer-btn:hover {
-    background: rgb(0, 70, 225);
+    background: rgb(0, 50, 205);
 }
 
 #shirt-image {
     margin: auto;
-    width: 50%;
+    width: 70%;
     height: 90%;
     border: solid #fff 2px;
+}
+
+#correct-answer {
+    text-align: center;
+    font-size: 20px;
 }
 
 #next-btn-container {
@@ -203,10 +224,7 @@ footer {
     border: solid #fff 2px;
 }
 
-#correct-answer {
-    text-align: center;
-    font-size: 20px;
-}
+/* the stylings of the results screen */
 
 #results-container {
     margin: auto;
@@ -231,4 +249,11 @@ footer {
 
 #retake-btn-link {
     text-decoration: none;
+}
+
+#results-image {
+    margin: auto;
+    width: 20%;
+    height: 30%;
+    border: solid #fff 2px;
 }

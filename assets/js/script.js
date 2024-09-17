@@ -1,3 +1,5 @@
+/* Two arrays that contain questiosn, answers and the correct answer */
+
 let quizData1 = [
     {
         question: "assets/images/team/accrington-stanley-95-96.webp",
@@ -30,9 +32,9 @@ let quizData1 = [
         correct: "Crystal Palace",
     },
     {
-        question: "assets/images/team/ipswich-town92-94.webp",
-        answers: ["Ipswich Town", "Chelsea", "Everton", "Manchester City"],
-        correct: "Ipswich Town",
+        question: "assets/images/team/cov-92-94.webp",
+        answers: ["Ipswich Town", "Swansea City", "Manchester City", "Coventry City"],
+        correct: "Coventry City",
     },
     {
         question: "assets/images/team/liverpool.webp",
@@ -58,51 +60,53 @@ let quizData2 = [
         correct: "1999",
     },
     {
-        question: "assets/images/year/Denmark-92.webp",
+        question: "assets/images/year/denmark-92.webp",
         answers: ["1991", "1990", "1995", "1992"],
         correct: "1992",
     },
     {
-        question: "assets/images/year/England-90.jpg",
+        question: "assets/images/year/england-90.webp",
         answers: ["1988", "1993", "1998", "1990"],
         correct: "1990",
     },
     {
-        question: "assets/images/year/Fiorentina-98-Batistuta.webp",
+        question: "assets/images/year/fiorentina-98.webp",
         answers: ["2000", "2002", "1998", "1994"],
         correct: "1998",
     },
     {
-        question: "assets/images/year/France-98-ZZ.webp",
+        question: "assets/images/year/france-98.webp",
         answers: ["1996", "1998", "2000", "2004"],
         correct: "1998",
     },
     {
-        question: "assets/images/year/Nigeria-96-Jay-Jay.webp",
+        question: "assets/images/year/nigeria-96-jay-jay.webp",
         answers: ["1996", "1994", "2000", "1990"],
         correct: "1996",
     },
     {
-        question: "assets/images/year/Marcel-Desailly-AC-Milan-1993.jpg",
+        question: "assets/images/year/acmilan-93.webp",
         answers: ["1990", "1995", "1999", "1993"],
         correct: "1993",
     },
     {
-        question: "assets/images/year/Sampdoria-91-92.jpg",
+        question: "assets/images/year/sampdoria-91-92.webp",
         answers: ["1988", "1999", "1991", "1997"],
         correct: "1991",
     },
     {
-        question: "assets/images/year/Scotland-98.jpg",
+        question: "assets/images/year/scotland-98.webp",
         answers: ["1998", "1996", "2000", "2006"],
         correct: "1998",
     },
     {
-        question: "assets/images/year/Utd-98-99.webp",
+        question: "assets/images/year/man-98-99.webp",
         answers: ["1999", "2001", "1997", "2002"],
         correct: "1999",
     },
 ];
+
+/* The main variable that control the game */
 
 let username = document.getElementById("username");
 const home = document.getElementById('home');
@@ -116,7 +120,9 @@ let finalScore = 0;
 let questionArray = [];
 let gameMode = 'shirt-team';
 
-
+/**
+ * A function that decides which array to sue, dependant on which game mode is chosen
+ */
 function modeOfGame (gameMode) {
     if (gameMode === 'shirt-team') {
         questionArray = quizData1;
@@ -127,7 +133,9 @@ function modeOfGame (gameMode) {
 
 document.getElementById('user-submit').addEventListener('click', confirmUser);
 
-// a function that requires the user to enter in a username
+/**
+ * a function that requires the user to enter in a username
+ */
 function confirmUser () {
     if (username.value === ''){
         alert('Please enter a name');
@@ -139,18 +147,28 @@ function confirmUser () {
     document.getElementById('next-choose-container').classList.remove('hidden');
 }}
 
+/**
+ * a function that hides the rules and adds the game choice selection screen
+ * works when the game choices button is clicked
+ */
+
 document.getElementById('game-choices-btn').addEventListener('click', gameType);
-// a function that hides the rules and adds the game choice selection screen
+
 function gameType () {
     document.getElementById('rules-container').classList.add('hidden');
     document.getElementById('game-choices-container').classList.remove('hidden');
     document.getElementById('game-choices-btn').classList.add('hidden');
 };
 
+/**
+ * two functions that start seperate game modes
+ * event listeners are used when the start button is clicked
+ * game mode is chosen when clicked
+ */
+
 document.getElementById('guess-shirt-start-btn').addEventListener('click', startGuessShirtTeam);
 document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
 
-// function to start the Guess the Shirt type game
 function startGuessShirtTeam () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
@@ -162,14 +180,20 @@ function startGuessShirtTeam () {
 function startGuessShirtYear () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
-    let gameMode = 'shirt-year'
+    gameMode = 'shirt-year'
     modeOfGame('shirt-year');
     createQuestion();
     displayNumberOfQuestions(); 
 };
 
-// a function that displays the shirts from the quiz array and the answers in their boxes.
+
+/**
+ * a function that displays the shirts from the quiz array and the answers in their boxes.
+ * calls the unique question title too
+ */
+
 function createQuestion () {
+    console.log(gameMode);
     displayQuestionTitle(gameMode);
     shirtImage.src = questionArray[questionNumber].question;
     
@@ -185,7 +209,10 @@ function createQuestion () {
     document.getElementById('answer-button-4').addEventListener('click', checkAnswer);
 };
 
-// a function that displays a unique question for this particular game choice
+
+/**
+ * a function that displays a unique question for this particular game choice
+ */
 function displayQuestionTitle (gameMode) {
     if (gameMode === 'shirt-team') {
         let questionTitle = document.getElementById('question-title');
@@ -197,24 +224,40 @@ function displayQuestionTitle (gameMode) {
     questionTitle.appendChild(questionText);
 }};
 
-// a function that clears the previous question so it does not repeat over and over again
+/**
+ *  a function that clears the previous question title so it does not repeat over and over again
+ */
+
 function clearQuestionTitle () {
     document.getElementById('question-title').innerHTML = '';
 };
 
-// function that displays the total number of questions in the quiz
+/**
+ * function that displays the total number of questions in the quiz
+ */
+
 function displayNumberOfQuestions() {
     document.getElementById('number-of-qs').innerText = questionArray.length;
 };
 
-// a function that shows the current question number
+/**
+ * a function that shows the current question number
+ */
+
 function showCurrentQuestionNumber() {
     document.getElementById('q-number').innerText = questionNumber + 1;
 };
 
+
+/**
+ * a function that displays the next question
+ * clears data from any previous question
+ * resets any clicked answers
+ * ends the quiz if the max number of questions is reached
+ */
+
 document.getElementById('next-btn').addEventListener('click', nextQuestion);
 
-// a function that displays the next question
 function nextQuestion () {
     let allAnswers = document.querySelectorAll('.answer-btns');
     allAnswers.forEach((o) => {
@@ -232,7 +275,11 @@ function nextQuestion () {
     showCurrentQuestionNumber();
 };
 
-// a function to clear the answers from the previous question
+
+/**
+ * a function to clear the answers from the previous question
+ */
+
 function clearAnswers (){
     document.getElementById('answer-button-1').classList.remove('correct', 'incorrect')
     document.getElementById('answer-button-2').classList.remove('correct', 'incorrect')
@@ -240,12 +287,19 @@ function clearAnswers (){
     document.getElementById('answer-button-4').classList.remove('correct', 'incorrect')
 };
 
-// the function that displays the current score the user has
+/**
+ * a function that displays the current score the user has
+ */
+
 function showUserScore () {
     document.getElementById('userScore').innerText = userScore;
 };
+/**
+ * a function that check whether or not an answer is correct and to disable the other options
+ * adds to the user score if correct
+ * shows what the right answer is, if the wrong one is clicked
+ */
 
-// a function that check whether or not an answer is correct and to disable the other options
 function checkAnswer (e) {
     let userAnswer = e.target.textContent;
     if (userAnswer === questionArray[questionNumber].correct) {
@@ -267,36 +321,58 @@ function checkAnswer (e) {
     });
 };
 
+/**
+ * a function that clears the message stating the correct answer
+ */
+
 function clearCorrectAnswer () {
     document.getElementById('correct-answer').innerHTML = '';
 };
 
-// A function that displays the final amount of questions in the results container
+/**
+ * A function that displays the final amount of questions in the results container
+ */
+
 function displayFinalNumberOfQuestions () {
     document.getElementById('final-number-of-qs').innerText = questionArray.length;
 };
 
-// A function that displays the users final score in the results container
+
+/**
+ * A function that displays the users final score in the results container
+ */
+
 function displayFinalScore () {
     document.getElementById('final-score').innerText = finalScore;
 };
 
-// A function that displays a different results messgae which is dependant on the score that the user got
+
+/**
+ * a function that displays a different results messgae which is dependant on the score that the user got
+ */
+
 function displayResultsMessage (){    
     if (finalScore < 3) {
         document.getElementById('results-message').innerText = "This is relegation form";
+        document.getElementById('results-image').src = 'assets/images/have-a-word.webp';
     } else if (finalScore <= 5) {
         document.getElementById('results-message').innerText = "You are comfortably mid-table, there's always next season";
+        document.getElementById('results-image').src = 'assets/images/90s-kits.webp';
     } else if (finalScore <= 9) {
         document.getElementById('results-message').innerText = "Great effort, you are pushing for the play-offs";
+        document.getElementById('results-image').src = 'assets/images/chelsea-97.webp';
     } else if (finalScore == questionArray.length) {
         document.getElementById('results-message').innerText = "Top of the league! Champions!";
+        document.getElementById('results-image').src = 'assets/images/blackburn-94-95.webp';
     } else {
         document.getElementById('results-message').innerText = "There seems to be a problem here";
     }
 };
 
-// This function is called when the user has gone through all of the possible questions
+/**
+ * This function is called when the user has gone through all of the possible questions
+ */
+
 function displayQuizResult() {
     displayFinalNumberOfQuestions();
     displayResultsMessage();
