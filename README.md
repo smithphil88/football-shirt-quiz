@@ -113,8 +113,59 @@ The following wireframes were produced at the start of the design process and ha
 - In this section a container displays the users final score out of however many questions there are in the dataset.
 - A unique written message containing their username appears thanking the user for playing.
 - An if statement was written to show different messages depending on the score the user had.
-- Once a user has completed the quiz, a button is there to take the user back to the landing page.
+- Once a user has completed the quiz, a button is there to take the user back to the landing page
 
 
+### Languages
+
+- [HTML](https://en.wikipedia.org/wiki/HTML) was used to create the layout of the site.
+- [CSS](https://en.wikipedia.org/wiki/CSS) was used to style the site.
+- [JS](https://en.wikipedia.org/wiki/JavaScript)
+- [Markdown](https://en.wikipedia.org/wiki/Markdown) was used to create this README file.
+
+#### Technologies used 
+
+- [Google Fonts](https://fonts.google.com/) - this was used to import the fonts Silkscreen.
+- [Font Awesome](https://fontawesome.com/) - this was used in order to have icons load onto certain pages.
+- [Simple Image Sizer](https://www.simpleimageresizer.com/) - this was used to convert images from JPEG to WEBP.
+- [Image Resizer](https://imageresizer.com/) - this site was used to resize some of the images.
+- [Balsamiq](https://balsamiq.com/) - this was utilised to create my wireframes.
+- [Git](https://git-scm.com/) - this was used for version control, using the terminal to add, commit and push to GitHub.
+- [Gitpod](https://www.gitpod.io/) - this was the IDE used to code.
+- [GitHub](https://github.com/) - this is used to store, track and share my project.
+- [GitHub pages](https://pages.github.com/) - this has been used to deploy my site.
+- [Go Full Page](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=en) - to take full screen captures.
+- [Responsive viewer](https://responsiveviewer.org/) - this was used to check responsiveness on a variety of devices.
+
+## Testing
+
+Please see the [TESTING.md](TESTING.md) file for all testing conducted.
+
+## Deployment
+
+#### How to deploy the site
+
+In order to deploy the site, follow these steps:
+
+- Navigate to the correct repository [smithphil88/football-shirt-quiz](https://github.com/smithphil88/football-shirt-quiz) and click on the 'Settings' tab.
+- On the left side under the menu 'Code and automation', click on the 'Pages' link.
+- From the source section drop-down menu, select the 'Master Branch'.
+- Once selected, the page will automatically refresh with a detailed ribbon, indicating a successful deployment.
+
+- The link to the live address is here - [Football Quiz](https://github.com/smithphil88/football-shirt-quiz)
+
+#### How to clone the site
+
+In order to clone the site and make a local copy, follow these steps:
+
+- Go to the repository [smithphil88/football-shirt-quiz](https://github.com/smithphil88/football-shirt-quiz)
+- Click on the 'Code' button, click on 'HTTPS' and copy the link.
+- Open a terminal or GitBash and select where to store the cloned copy.
+- When asked, type in **git clone** into the terminal.
+- Then paste in the previous copied link to begin the cloning process.
+
+## Bugs
+
+## Credits
 
 
