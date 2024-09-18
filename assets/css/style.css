@@ -261,8 +261,12 @@ footer {
 
 /* media and responsiveness on mobile size */
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
     
+    #rules-container {
+        width:60%;
+    }
+
     #title {
         font-size: 20px;
     }
@@ -275,19 +279,23 @@ footer {
         font-size: 10px;
 }
 
-#username-label {
-    font-size: 10px;
+    #username-label {
+        font-size: 10px;
 }
 
-.button {
-    font-size: 10px;
+    .button {
+        font-size: 10px;
 }
 
-#welcome-message {
+    #welcome-message {
+        font-size: 10px;
+}
+
+    .footer-message {
+        font-size: 8px;
+}
+
+.game-choice {
     font-size: 12px;
-}
-
-.footer-message {
-    font-size: 8px;
 }
 }
