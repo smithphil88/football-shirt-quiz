@@ -193,7 +193,6 @@ function startGuessShirtYear () {
  */
 
 function createQuestion () {
-    console.log(gameMode);
     displayQuestionTitle(gameMode);
     shirtImage.src = questionArray[questionNumber].question;
     

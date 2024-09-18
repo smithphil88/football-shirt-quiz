@@ -152,7 +152,7 @@ In order to deploy the site, follow these steps:
 - From the source section drop-down menu, select the 'Master Branch'.
 - Once selected, the page will automatically refresh with a detailed ribbon, indicating a successful deployment.
 
-- The link to the live address is here - [Football Quiz](https://github.com/smithphil88/football-shirt-quiz)
+- The link to the live address is here - [Football Quiz](https://smithphil88.github.io/football-shirt-quiz/)
 
 #### How to clone the site
 

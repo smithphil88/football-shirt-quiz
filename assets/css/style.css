@@ -258,3 +258,36 @@ footer {
     height: 30%;
     border: solid #fff 2px;
 }
+
+/* media and responsiveness on mobile size */
+
+@media screen and (max-width: 375px) {
+    
+    #title {
+        font-size: 20px;
+    }
+
+    #rules-title {
+        font-size: 16px;
+    }
+    
+    .rules {
+        font-size: 10px;
+}
+
+#username-label {
+    font-size: 10px;
+}
+
+.button {
+    font-size: 10px;
+}
+
+#welcome-message {
+    font-size: 12px;
+}
+
+.footer-message {
+    font-size: 8px;
+}
+}
