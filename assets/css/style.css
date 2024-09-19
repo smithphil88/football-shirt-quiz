@@ -279,6 +279,10 @@ footer {
         font-size: 10px;
 }
 
+#user-submit-btn {
+    display: block;
+}
+
     #username-label {
         font-size: 10px;
 }
@@ -297,5 +301,39 @@ footer {
 
 .game-choice {
     font-size: 12px;
+}
+
+#score-box {
+    width: 80%;
+}
+
+#questions-answers{
+    display: block;
+}
+
+.answer-btn {
+    width: 100%;
+}
+
+#next-btn-container {
+    width: 50%;
+}
+
+#thankyou-message {
+    font-size: 12px;
+}
+
+#results-message {
+    font-size: 12px;
+}
+
+.final-result {
+    font-size: 10px;
+}
+
+#retake-btn {
+    height: 60px;
+    font-size: 12px;
+    padding: 5px;
 }
 }
