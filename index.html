@@ -62,12 +62,12 @@
         <section id="question-container" class ="hidden">
             <div id="score-box" class="score-box" >
                 <p>Question # <span id="q-number">1</span></p>
-                <p>Score <span id="userScore">0</span>/<span id="number-of-qs">0</span></p>
+                <p>Score <span id="user-score">0</span>/<span id="number-of-qs">0</span></p>
             </div>
             <div id="questions-answers">
                 <div id="question-box" >
                     <p id="question-title"></p>
-                    <img id="shirt-image" src="" alt="a football shirt">
+                    <img id="shirt-image" src="assets/images/blackburn-default.webp" alt="a football shirt">
                 </div>
                 <div class="answer-btns">
                     <button id="answer-button-1" class="answer-btn">answer 1</button>
@@ -86,11 +86,13 @@
             <div id="results-container">
                 <p id="thankyou-message"></p>
                 <p id="results-message"></p>
-                <img id="results-image" src="" alt="">
+                <img id="results-image" src="assets/images/blackburn-default.webp" alt="a footballer">
                 <p class="final-result">Score <span class="final-result" id="final-score">0</span>/<span id="final-number-of-qs" class="final-result">0</span></p>
             </div>
             <div id="finish-btns">
-                <a id="retake-btn-link" href="index.html" aria-label="Takes you to initial landing page"><button id="retake-btn" class="button">Go to the home screen</button></a>
+                <form style="display: inline" action="index.html" method="get" id="retake-btn-link">
+                    <button id="retake-btn" class="button">Go to the home screen</button>
+                </form>
             </div>
         </section>
     </main>

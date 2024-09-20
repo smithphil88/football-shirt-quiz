@@ -1,5 +1,5 @@
+/* jshint esversion: 6 */
 /* Two arrays that contain questiosn, answers and the correct answer */
-
 let quizData1 = [
     {
         question: "assets/images/team/accrington-stanley-95-96.webp",
@@ -107,7 +107,6 @@ let quizData2 = [
 ];
 
 /* The main variable that control the game */
-
 let username = document.getElementById("username");
 const home = document.getElementById('home');
 const shirtImage = document.getElementById("shirt-image");
@@ -132,28 +131,26 @@ function modeOfGame (gameMode) {
 }
 
 document.getElementById('user-submit').addEventListener('click', confirmUser);
-
 /**
  * a function that requires the user to enter in a username
  */
 function confirmUser () {
-    if (username.value === ''){
+    let usernameCurrent = username.value;
+    if (usernameCurrent === ''){
         alert('Please enter a name');
-    } else if (username.value.length >= 20){
-        alert('Your username cannot be over 20 characters')
+    } else if (usernameCurrent.length >= 20){
+        alert('Your username cannot be over 20 characters');
     } else  {
     username = document.getElementById("username").value;
     document.getElementById("welcome-message").textContent = `Welcome ${username}, are you ready to play? Click the button below to choose your game mode.`;
     document.getElementById('next-choose-container').classList.remove('hidden');
-}};
+}}
 
 /**
  * a function that hides the rules and adds the game choice selection screen
  * works when the game choices button is clicked
  */
-
 document.getElementById('game-choices-btn').addEventListener('click', gameType);
-
 function gameType () {
     document.getElementById('rules-container').classList.add('hidden');
     document.getElementById('game-choices-container').classList.remove('hidden');
@@ -165,10 +162,8 @@ function gameType () {
  * event listeners are used when the start button is clicked
  * game mode is chosen when clicked
  */
-
 document.getElementById('guess-shirt-start-btn').addEventListener('click', startGuessShirtTeam);
 document.getElementById('guess-year-start-btn').addEventListener('click', startGuessShirtYear);
-
 function startGuessShirtTeam () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
@@ -176,7 +171,6 @@ function startGuessShirtTeam () {
     createQuestion();
     displayNumberOfQuestions();
 }
-
 function startGuessShirtYear () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
@@ -186,12 +180,10 @@ function startGuessShirtYear () {
     displayNumberOfQuestions(); 
 }
 
-
 /**
  * a function that displays the shirts from the quiz array and the answers in their boxes.
  * calls the unique question title too
  */
-
 function createQuestion () {
     displayQuestionTitle(gameMode);
     shirtImage.src = questionArray[questionNumber].question;
@@ -207,7 +199,6 @@ function createQuestion () {
     document.getElementById('answer-button-3').addEventListener('click', checkAnswer);
     document.getElementById('answer-button-4').addEventListener('click', checkAnswer);
 }
-
 
 /**
  * a function that displays a unique question for this particular game choice
@@ -226,7 +217,6 @@ function displayQuestionTitle (gameMode) {
 /**
  *  a function that clears the previous question title so it does not repeat over and over again
  */
-
 function clearQuestionTitle () {
     document.getElementById('question-title').innerHTML = '';
 }
@@ -234,7 +224,6 @@ function clearQuestionTitle () {
 /**
  * function that displays the total number of questions in the quiz
  */
-
 function displayNumberOfQuestions() {
     document.getElementById('number-of-qs').innerText = questionArray.length;
 }
@@ -242,11 +231,9 @@ function displayNumberOfQuestions() {
 /**
  * a function that shows the current question number
  */
-
 function showCurrentQuestionNumber() {
     document.getElementById('q-number').innerText = questionNumber + 1;
 }
-
 
 /**
  * a function that displays the next question
@@ -254,9 +241,7 @@ function showCurrentQuestionNumber() {
  * resets any clicked answers
  * ends the quiz if the max number of questions is reached
  */
-
 document.getElementById('next-btn').addEventListener('click', nextQuestion);
-
 function nextQuestion () {
     let allAnswers = document.querySelectorAll('.answer-btns');
     allAnswers.forEach((o) => {
@@ -274,11 +259,9 @@ function nextQuestion () {
     showCurrentQuestionNumber();
 }
 
-
 /**
  * a function to clear the answers from the previous question
  */
-
 function clearAnswers (){
     document.getElementById('answer-button-1').classList.remove('correct', 'incorrect');
     document.getElementById('answer-button-2').classList.remove('correct', 'incorrect');
@@ -289,16 +272,15 @@ function clearAnswers (){
 /**
  * a function that displays the current score the user has
  */
-
 function showUserScore () {
-    document.getElementById('userScore').innerText = userScore;
+    document.getElementById('user-score').innerText = userScore;
 }
+
 /**
  * a function that check whether or not an answer is correct and to disable the other options
  * adds to the user score if correct
  * shows what the right answer is, if the wrong one is clicked
  */
-
 function checkAnswer (e) {
     let userAnswer = e.target.textContent;
     if (userAnswer === questionArray[questionNumber].correct) {
@@ -323,7 +305,6 @@ function checkAnswer (e) {
 /**
  * a function that clears the message stating the correct answer
  */
-
 function clearCorrectAnswer () {
     document.getElementById('correct-answer').innerHTML = '';
 }
@@ -331,25 +312,20 @@ function clearCorrectAnswer () {
 /**
  * A function that displays the final amount of questions in the results container
  */
-
 function displayFinalNumberOfQuestions () {
     document.getElementById('final-number-of-qs').innerText = questionArray.length;
 }
 
-
 /**
  * A function that displays the users final score in the results container
  */
-
 function displayFinalScore () {
     document.getElementById('final-score').innerText = finalScore;
 }
 
-
 /**
  * a function that displays a different results messgae which is dependant on the score that the user got
  */
-
 function displayResultsMessage (){    
     if (finalScore < 3) {
         document.getElementById('results-message').innerText = "This is relegation form";
@@ -371,7 +347,6 @@ function displayResultsMessage (){
 /**
  * This function is called when the user has gone through all of the possible questions
  */
-
 function displayQuizResult() {
     displayFinalNumberOfQuestions();
     displayResultsMessage();
