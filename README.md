@@ -84,7 +84,7 @@ The following wireframes were produced at the start of the design process and ha
 - It is on display at every stage and step of the quiz for easy accessability for the user.
 - Icons are used from Font Awesome to make it more appealing.
 
-![Landing page](documentation/wireframes/results-screen.png)
+![Landing page](documentation/home-title.png)
 
 ### Rules section
 
@@ -95,6 +95,13 @@ The following wireframes were produced at the start of the design process and ha
 - To protect against any potential username crashes, usernames are limited to 20 characters.
 - Once the username has passed the validation a button appears, prompting the user to the next screen.
 
+![Rules](documentation/rules.png)
+
+![User Validation](documentation/username-validation.png)
+
+![Welcome-message](documentation/welcome-message.png)
+
+
 ### Game choice selection 
 
 - In this section the user has the option to select a game type.
@@ -103,6 +110,8 @@ The following wireframes were produced at the start of the design process and ha
 - The other game mode is considered a harder mode, where the user needs to guess the year the photo was taken.
 - Once the rules have been read the user may select an option.
 
+![Game-choice](documentation/game-selection.png)
+
 ### Quiz screen
 
 - This is the main part of the quiz, where the question number, user score, out of how many questions, the question and image, four answer buttons and the next question button appear.
@@ -110,12 +119,32 @@ The following wireframes were produced at the start of the design process and ha
 - If a user is successful in their answer the userscore is incremented too.
 - If a user is unsuccessful then a sentence appears, informing the user of the correct answer.
 
+![Guess team](documentation/guess-team.png)
+
+![Guess team](documentation/guess-team-correct.png)
+
+![Guess team](documentation/guess-team-incorrect.png)
+
+![Guess year](documentation/guess-year.png)
+
+![Guess year](documentation/guess-year-correct.png)
+
+![Guess year](documentation/guess-year-incorrect.png)
+
 ### Results screen
 
 - In this section a container displays the users final score out of however many questions there are in the dataset.
 - A unique written message containing their username appears thanking the user for playing.
 - An if statement was written to show different messages depending on the score the user had.
-- Once a user has completed the quiz, a button is there to take the user back to the landing page
+- Once a user has completed the quiz, a button is there to take the user back to the landing page.
+
+![Results](documentation/results-1.png)
+
+![Results](documentation/results-2.png)
+
+![Results](documentation/results-3.png)
+
+![Results](documentation/results-4.png)
 
 ### Future features
 
@@ -179,6 +208,12 @@ In order to clone the site and make a local copy, follow these steps:
 ## Bugs
 
 A variety of bugs occured during the development process. With a combination of using my course facilitator, my mentor and Code Institute tutoring services, I was able to work through these issues.
+
+![Bug](documentation/bug-1.png)
+
+![Bug](documentation/username-error.png)
+
+This occured at the very end of the project when manually testing. All code and functionality worked as expected, however when changing username this error appeared. I was able to fix this by hiding the label, input field and button when the submit button was clicked.
 
 ## Credits
 
