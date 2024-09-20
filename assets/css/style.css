@@ -259,44 +259,122 @@ footer {
     border: solid #fff 2px;
 }
 
-/* media and responsiveness on mobile size */
+/* media and responsiveness on mtablet size */
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
+#rules-container {
+    width:60%;
+}
+
+#title {
+    font-size: 24px;
+}
+
+#rules-title {
+    font-size: 18px;
+}
     
-    #rules-container {
-        width:60%;
-    }
-
-    #title {
-        font-size: 20px;
-    }
-
-    #rules-title {
-        font-size: 16px;
-    }
-    
-    .rules {
-        font-size: 10px;
+.rules {
+    font-size: 14px;
 }
 
 #user-submit-btn {
     display: block;
 }
 
-    #username-label {
-        font-size: 10px;
+#username-label {
+    font-size: 14px;
 }
 
-    .button {
-        font-size: 10px;
+.button {
+    font-size: 14px;
 }
 
-    #welcome-message {
-        font-size: 10px;
+#welcome-message {
+    font-size: 14px;
 }
 
-    .footer-message {
-        font-size: 8px;
+.footer-message {
+    font-size: 10px;
+}
+
+.game-choice {
+    font-size: 14px;
+}
+
+#score-box {
+    width: 80%;
+}
+
+#questions-answers{
+    display: block;
+}
+
+.answer-btn {
+    width: 100%;
+}
+
+#next-btn-container {
+    width: 50%;
+}
+
+#thankyou-message {
+    font-size: 16px;
+}
+
+#results-message {
+    font-size: 16px;
+}
+
+.final-result {
+    font-size: 12px;
+}
+
+#retake-btn {
+    height: 60px;
+    font-size: 14px;
+    padding: 5px;
+}
+}
+
+/* media and responsiveness on mobile size */
+
+@media screen and (max-width: 425px) {
+    
+#rules-container {
+    width:60%;
+}
+
+#title {
+    font-size: 20px;
+}
+
+#rules-title {
+    font-size: 16px;
+}
+    
+.rules {
+    font-size: 10px;
+}
+
+#user-submit-btn {
+    display: block;
+}
+
+#username-label {
+    font-size: 10px;
+}
+
+.button {
+    font-size: 10px;
+}
+
+#welcome-message {
+    font-size: 10px;
+}
+
+.footer-message {
+    font-size: 8px;
 }
 
 .game-choice {
