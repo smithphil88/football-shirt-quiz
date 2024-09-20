@@ -3,11 +3,15 @@
 /*Stylings for the whole page*/
 body {
     background-color: black;
-    font-family: Silkscreen;
+    font-family: Silkscreen, sans-serif;
     color: #fff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 /* title style */
@@ -31,15 +35,6 @@ body {
     color:#fff;
 }
 /* stylings of the footer section, that appears on the screen at all times */
-
-footer {
-    height: auto;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    margin-top: 10px;
-}
 
 .footer {
     text-align: center;
