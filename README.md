@@ -84,6 +84,8 @@ The following wireframes were produced at the start of the design process and ha
 - It is on display at every stage and step of the quiz for easy accessability for the user.
 - Icons are used from Font Awesome to make it more appealing.
 
+![Landing page](documentation/wireframes/results-screen.png)
+
 ### Rules section
 
 - On the landing page, the rules are displayed to the user, so they can make a quick decision if the site is of interest to them.
@@ -122,13 +124,14 @@ If this site was to expand, I would implement the following:
 - A message that warns the user they are leaving the page if they click the title button.
 - More questions in each game mode.
 - An option to choose a favourite team at the start and a colour scheme would apply to the site.
+- A function could be used to shuffle the order of questions.
 
 
 ### Languages
 
 - [HTML](https://en.wikipedia.org/wiki/HTML) was used to create the layout of the site.
 - [CSS](https://en.wikipedia.org/wiki/CSS) was used to style the site.
-- [JS](https://en.wikipedia.org/wiki/JavaScript)
+- [JS](https://en.wikipedia.org/wiki/JavaScript) was used to create the functionality of the site.
 - [Markdown](https://en.wikipedia.org/wiki/Markdown) was used to create this README file.
 
 #### Technologies used 

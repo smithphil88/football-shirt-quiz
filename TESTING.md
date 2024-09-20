@@ -18,4 +18,19 @@ In this section, I will evidence the user-stories.
 ![Buttons](documentation/user-stories/navigation-2.png)
 
 
+### Validation
+
+HTML validation - ***passed***
+
+![HTML](documentation/html-validation.png)
+
+CSS validation - ***passed***
+
+![CSS](documentation/css-evidence.png)
+
+JShint - ***passed***
+
+![JShint](documentation/jshint-1.png)
+
+
 

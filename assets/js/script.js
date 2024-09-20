@@ -108,10 +108,7 @@ let quizData2 = [
 
 /* The main variable that control the game */
 let username = document.getElementById("username");
-const home = document.getElementById('home');
 const shirtImage = document.getElementById("shirt-image");
-const answerBtns = document.getElementsByClassName("answer-btns");
-const questionBox = document.getElementById("question-box");
 const maxQuestions = 10;
 let questionNumber = 0;
 let userScore = 0;
@@ -142,6 +139,7 @@ function confirmUser () {
         alert('Your username cannot be over 20 characters');
     } else  {
     username = document.getElementById("username").value;
+    document.getElementById('user-submit-btn').classList.add('hidden');
     document.getElementById("welcome-message").textContent = `Welcome ${username}, are you ready to play? Click the button below to choose your game mode.`;
     document.getElementById('next-choose-container').classList.remove('hidden');
 }}
