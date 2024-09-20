@@ -115,6 +115,14 @@ The following wireframes were produced at the start of the design process and ha
 - An if statement was written to show different messages depending on the score the user had.
 - Once a user has completed the quiz, a button is there to take the user back to the landing page
 
+### Future features
+
+If this site was to expand, I would implement the following:
+- Two new game modes - a harder guess the team mode and a guess the team badge mode.
+- A message that warns the user they are leaving the page if they click the title button.
+- More questions in each game mode.
+- An option to choose a favourite team at the start and a colour scheme would apply to the site.
+
 
 ### Languages
 
@@ -136,6 +144,7 @@ The following wireframes were produced at the start of the design process and ha
 - [GitHub pages](https://pages.github.com/) - this has been used to deploy my site.
 - [Go Full Page](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=en) - to take full screen captures.
 - [Responsive viewer](https://responsiveviewer.org/) - this was used to check responsiveness on a variety of devices.
+- [JShint](https://jshint.com/) - this was utilised to check my JS file for errors.
 
 ## Testing
 
@@ -165,6 +174,8 @@ In order to clone the site and make a local copy, follow these steps:
 - Then paste in the previous copied link to begin the cloning process.
 
 ## Bugs
+
+A variety of bugs occured during the development process. With a combination of using my course facilitator, my mentor and Code Institute tutoring services, I was able to work through these issues.
 
 ## Credits
 

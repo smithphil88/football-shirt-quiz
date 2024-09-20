@@ -129,7 +129,7 @@ function modeOfGame (gameMode) {
     } else {
         questionArray = quizData2;
     }
-};
+}
 
 document.getElementById('user-submit').addEventListener('click', confirmUser);
 
@@ -140,12 +140,12 @@ function confirmUser () {
     if (username.value === ''){
         alert('Please enter a name');
     } else if (username.value.length >= 20){
-        alert('Your username cannot be over 20 characters');
+        alert('Your username cannot be over 20 characters')
     } else  {
     username = document.getElementById("username").value;
-    document.getElementById("welcome-message").textContent = `Welcome ${username}, are you ready to play? Click the button below to choose your game mode.`
+    document.getElementById("welcome-message").textContent = `Welcome ${username}, are you ready to play? Click the button below to choose your game mode.`;
     document.getElementById('next-choose-container').classList.remove('hidden');
-}}
+}};
 
 /**
  * a function that hides the rules and adds the game choice selection screen
@@ -158,7 +158,7 @@ function gameType () {
     document.getElementById('rules-container').classList.add('hidden');
     document.getElementById('game-choices-container').classList.remove('hidden');
     document.getElementById('game-choices-btn').classList.add('hidden');
-};
+}
 
 /**
  * two functions that start seperate game modes
@@ -175,16 +175,16 @@ function startGuessShirtTeam () {
     modeOfGame('shirt-team');
     createQuestion();
     displayNumberOfQuestions();
-};
+}
 
 function startGuessShirtYear () {
     document.getElementById('game-choices-container').classList.add('hidden');
     document.getElementById('question-container').classList.remove('hidden');
-    gameMode = 'shirt-year'
+    gameMode = 'shirt-year';
     modeOfGame('shirt-year');
     createQuestion();
     displayNumberOfQuestions(); 
-};
+}
 
 
 /**
@@ -197,16 +197,16 @@ function createQuestion () {
     shirtImage.src = questionArray[questionNumber].question;
     
     questionArray[questionNumber].answers.forEach((o) => {
-        document.getElementById('answer-button-1').innerText = questionArray[questionNumber].answers[0]
-        document.getElementById('answer-button-2').innerText = questionArray[questionNumber].answers[1]
-        document.getElementById('answer-button-3').innerText = questionArray[questionNumber].answers[2]
-        document.getElementById('answer-button-4').innerText = questionArray[questionNumber].answers[3]
+        document.getElementById('answer-button-1').innerText = questionArray[questionNumber].answers[0];
+        document.getElementById('answer-button-2').innerText = questionArray[questionNumber].answers[1];
+        document.getElementById('answer-button-3').innerText = questionArray[questionNumber].answers[2];
+        document.getElementById('answer-button-4').innerText = questionArray[questionNumber].answers[3];
     });
     document.getElementById('answer-button-1').addEventListener('click', checkAnswer);
     document.getElementById('answer-button-2').addEventListener('click', checkAnswer);
     document.getElementById('answer-button-3').addEventListener('click', checkAnswer);
     document.getElementById('answer-button-4').addEventListener('click', checkAnswer);
-};
+}
 
 
 /**
@@ -221,7 +221,7 @@ function displayQuestionTitle (gameMode) {
     let questionTitle = document.getElementById('question-title');
     let questionText = document.createTextNode('What year was this worn?');
     questionTitle.appendChild(questionText);
-}};
+}}
 
 /**
  *  a function that clears the previous question title so it does not repeat over and over again
@@ -229,7 +229,7 @@ function displayQuestionTitle (gameMode) {
 
 function clearQuestionTitle () {
     document.getElementById('question-title').innerHTML = '';
-};
+}
 
 /**
  * function that displays the total number of questions in the quiz
@@ -237,7 +237,7 @@ function clearQuestionTitle () {
 
 function displayNumberOfQuestions() {
     document.getElementById('number-of-qs').innerText = questionArray.length;
-};
+}
 
 /**
  * a function that shows the current question number
@@ -245,7 +245,7 @@ function displayNumberOfQuestions() {
 
 function showCurrentQuestionNumber() {
     document.getElementById('q-number').innerText = questionNumber + 1;
-};
+}
 
 
 /**
@@ -260,7 +260,7 @@ document.getElementById('next-btn').addEventListener('click', nextQuestion);
 function nextQuestion () {
     let allAnswers = document.querySelectorAll('.answer-btns');
     allAnswers.forEach((o) => {
-        o.classList.remove('disabled')
+        o.classList.remove('disabled');
     });
     if (questionNumber >= maxQuestions - 1) {
         displayQuizResult();
@@ -272,7 +272,7 @@ function nextQuestion () {
     createQuestion(questionArray);
     clearAnswers();
     showCurrentQuestionNumber();
-};
+}
 
 
 /**
@@ -280,11 +280,11 @@ function nextQuestion () {
  */
 
 function clearAnswers (){
-    document.getElementById('answer-button-1').classList.remove('correct', 'incorrect')
-    document.getElementById('answer-button-2').classList.remove('correct', 'incorrect')
-    document.getElementById('answer-button-3').classList.remove('correct', 'incorrect')
-    document.getElementById('answer-button-4').classList.remove('correct', 'incorrect')
-};
+    document.getElementById('answer-button-1').classList.remove('correct', 'incorrect');
+    document.getElementById('answer-button-2').classList.remove('correct', 'incorrect');
+    document.getElementById('answer-button-3').classList.remove('correct', 'incorrect');
+    document.getElementById('answer-button-4').classList.remove('correct', 'incorrect');
+}
 
 /**
  * a function that displays the current score the user has
@@ -292,7 +292,7 @@ function clearAnswers (){
 
 function showUserScore () {
     document.getElementById('userScore').innerText = userScore;
-};
+}
 /**
  * a function that check whether or not an answer is correct and to disable the other options
  * adds to the user score if correct
@@ -316,9 +316,9 @@ function checkAnswer (e) {
 
     let allAnswers = document.querySelectorAll('.answer-btns');
     allAnswers.forEach((o) => {
-        o.classList.add('disabled')
+        o.classList.add('disabled');
     });
-};
+}
 
 /**
  * a function that clears the message stating the correct answer
@@ -326,7 +326,7 @@ function checkAnswer (e) {
 
 function clearCorrectAnswer () {
     document.getElementById('correct-answer').innerHTML = '';
-};
+}
 
 /**
  * A function that displays the final amount of questions in the results container
@@ -334,7 +334,7 @@ function clearCorrectAnswer () {
 
 function displayFinalNumberOfQuestions () {
     document.getElementById('final-number-of-qs').innerText = questionArray.length;
-};
+}
 
 
 /**
@@ -343,7 +343,7 @@ function displayFinalNumberOfQuestions () {
 
 function displayFinalScore () {
     document.getElementById('final-score').innerText = finalScore;
-};
+}
 
 
 /**
@@ -366,7 +366,7 @@ function displayResultsMessage (){
     } else {
         document.getElementById('results-message').innerText = "There seems to be a problem here";
     }
-};
+}
 
 /**
  * This function is called when the user has gone through all of the possible questions
@@ -379,4 +379,4 @@ function displayQuizResult() {
     document.getElementById('question-container').classList.add('hidden');
     document.getElementById('results').classList.remove('hidden');
     document.getElementById("thankyou-message").textContent = `Thanks for playing ${username}`;
-};
+}
