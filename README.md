@@ -45,7 +45,7 @@ The theme of the site is a homage to 1990's/2000's information services such as 
 
 ### Font and Colours
 
-The font chosen is SilkScreen with a back-up font of Sans-serif in case of a loading error. I wanted to font to simulate early computer system fonts, as this era links with the theme of the site. As mentioned above, the inspiration for the colour scheme was taken from services such as Ceefax and Teletext, therefore a black background was chosen with bright colours used for buttons, borders and titles.
+The font chosen is SilkScreen with a back-up font of Sans-Serif in case of a loading error. I wanted to font to simulate early computer system fonts, as this era links with the theme of the site. As mentioned above, the inspiration for the colour scheme was taken from services such as Ceefax and Teletext, therefore a black background was chosen with bright colours used for buttons, borders and titles.
 
 ### Images
 

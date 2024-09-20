@@ -55,7 +55,7 @@ let quizData1 = [
 
 let quizData2 = [
     {
-        question: "assets/images/year/Brazil98-00.avif",
+        question: "assets/images/year/brazil-99.webp",
         answers: ["1997", "1999", "2002", "1995"],
         correct: "1999",
     },
