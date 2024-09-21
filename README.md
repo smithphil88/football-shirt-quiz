@@ -1,5 +1,9 @@
 # Retro Football Quiz
 
+<p align="center">
+<img src="documentation/responsive-1.png">
+</p>
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -51,6 +55,12 @@ The font chosen is SilkScreen with a back-up font of Sans-Serif in case of a loa
 
 The images for the quiz were taken from a variety of sporting websites - see credits for more details. All images have been resized before adding to the site to ensure efficient formatting.
 
+### Miro
+
+This website was used in the planning process. It was a tool to create a flow for my site to follow. Using this board allow me to plan step-by-step, the quiz and the functionality my site needed. Here is a partial screenshot of my board.
+
+![Miro](documentation/miro.png)
+
 ### Wireframes
 
 The following wireframes were produced at the start of the design process and have not been altered. These designs show the various screens I wanted to include.
@@ -91,7 +101,7 @@ The following wireframes were produced at the start of the design process and ha
 - On the landing page, the rules are displayed to the user, so they can make a quick decision if the site is of interest to them.
 - These rules contain information on what to expect and how to proceed.
 - The user must enter a username into the input field in order to continue.
-- If the user tries to procedd without a username then an alert will pop up.
+- If the user tries to proceed without a username, then an alert will pop up.
 - To protect against any potential username crashes, usernames are limited to 20 characters.
 - Once the username has passed the validation a button appears, prompting the user to the next screen.
 
@@ -115,9 +125,9 @@ The following wireframes were produced at the start of the design process and ha
 ### Quiz screen
 
 - This is the main part of the quiz, where the question number, user score, out of how many questions, the question and image, four answer buttons and the next question button appear.
-- As the user progress through the question, navigating using the 'next question' button the question number will increment.
-- If a user is successful in their answer the userscore is incremented too.
-- If a user is unsuccessful then a sentence appears, informing the user of the correct answer.
+- As the user progress through the question, navigating using the 'next question' button, the question number will increment.
+- If a user is successful in their answer the users score is incremented too.
+- If a user is unsuccessful, a sentence appears, informing the user of the correct answer.
 
 ![Guess team](documentation/guess-team.png)
 
@@ -133,8 +143,8 @@ The following wireframes were produced at the start of the design process and ha
 
 ### Results screen
 
-- In this section a container displays the users final score out of however many questions there are in the dataset.
-- A unique written message containing their username appears thanking the user for playing.
+- In this section a container displays the users final score out of however many questions in the dataset.
+- A unique written message containing their username appears, thanking the user for playing.
 - An if statement was written to show different messages depending on the score the user had.
 - Once a user has completed the quiz, a button is there to take the user back to the landing page.
 
@@ -148,7 +158,7 @@ The following wireframes were produced at the start of the design process and ha
 
 ### Future features
 
-If this site was to expand, I would implement the following:
+If this site was to be expanded, I would implement the following:
 - Two new game modes - a harder guess the team mode and a guess the team badge mode.
 - A message that warns the user they are leaving the page if they click the title button.
 - More questions in each game mode.
@@ -177,6 +187,7 @@ If this site was to expand, I would implement the following:
 - [Go Full Page](https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl?hl=en) - to take full screen captures.
 - [Responsive viewer](https://responsiveviewer.org/) - this was used to check responsiveness on a variety of devices.
 - [JShint](https://jshint.com/) - this was utilised to check my JS file for errors.
+- [Miro](https://www.miro.com) - this was used to create a workflow of the functions needed.
 
 ## Testing
 
@@ -213,8 +224,41 @@ A variety of bugs occured during the development process. With a combination of 
 
 ![Bug](documentation/username-error.png)
 
-This occured at the very end of the project when manually testing. All code and functionality worked as expected, however when changing username this error appeared. I was able to fix this by hiding the label, input field and button when the submit button was clicked.
+This occured at the very end of the project when manually testing. All code and functionality worked as expected, however when changing username this error appeared. *Fixed by hiding the label, input field and button when the submit button was clicked.*
+
+![Bug](documentation/bug-2.png)
+
+A bug appeared throughout the latter stages of the development process. This only appeared in the console and did not affect anything on the site - *fixed by removing an unnecessary script line of code.*
+
+![Bug](documentation/bug-3.png)
+
+The biggest issue I faced in this project was passing my array for the second game mode - *fixed by creating a variable that allowed the game mode change, which held the specific set of data.*
 
 ## Credits
 
+### Images
+
+All images for the Guess the Shirt game were found on this website - [oldfoootballshirts](https://www.oldfootballshirts.com/en/index.php)
+
+The images for the Guess the Year game were found from the following:
+
+•	[Scotland](https://x.com/74frankfurt/status/1179651663948374018)
+
+•	[Denmark](https://www.uefa.com/uefaeuro/history/news/025a-0eb91faf9bf0-942d69c5a0a8-1000--euro-1992-all-you-need-to-know/)
+
+•	[Utd](https://elclasicofootball.com/products/manchester-united-1997-99-away-shirt-long-sleeve-size-l)
+
+•	[Sampdoria](https://x.com/Betfred/status/1087795574789812224)
+
+•	[England](https://thefootballheritage.com/product/england-1990-away-kit/)
+
+•	[France](https://www.cultkits.com/blogs/news/top-10-kits-from-france-world-cup-1998)
+
+•	[Nigeria](https://thelegendsrange.com/products/nigeria-world-cup-1996-home-shirt-okocha-10)
+
+•	[Fiorentina](https://rarefootballshirts.com/product/acf-fiorentina-1999-2000-home-shirt/)
+
+•	[Brazil](https://thefootballfaithful.com/nike-re-release-classic-brazil-1998-shirt-for-copa-america/)
+
+•	[AC-Milan](https://x.com/ProD_Soccer/status/1182657672329478145)
 
