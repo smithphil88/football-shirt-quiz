@@ -24,22 +24,22 @@ This website is designed for entertainment purposes. It consists of two differen
 
 ### First-time users
 
-- As a first-time user, I want to easily understand what the site is and offers, so I can decide if I will use it.
-- As a first-time user, I want to navigate the website intuitively, so I can find what they are looking for.
-- As a first-time user, I want to view the instructions, so I am aware of how to play.
-- As a first-time user, I want to see what question I am on and what score I currently have, so I understand my progress.
-- As a first-time user, I want to view my results, so I know my final score.
-- As a first-time user, I want to be able to retake the quiz easily, so I can beat my score.
-- As a first-time user, I want the site to be responsive on a variety of screen sizes so I can play anywhere.
+- As a first-time user, I want to easily understand what the site is and what it offers so that I can decide if I will use it.
+- As a first-time user, I want to navigate the website intuitively so I can find what I am looking for.
+- As a first-time user, I want to view the instructions so I am aware of how to play.
+- As a first-time user, I want to see what question I am on and what score I currently have so I understand my progress.
+- As a first-time user, I want to view my results so that I know my final score.
+- As a first-time user, I want to be able to retake the quiz easily so that I can try to beat my score.
+- As a first-time user, I want the site to be responsive on a variety of screen sizes so that I can play anywhere.
 
 ### Returning users
 
-- As a returning user, I want different game modes, so I can have a different experience.
+- As a returning user, I want to access different game modes so that I can have a different experience.
 
 ### Website owner 
 
 - As the owner, I want the website to be responsive so that users can use it on any device.
-- As the owner, I want the website to be fun and interesting, so the user returns.
+- As the owner, I want the website to be fun and interesting, encouraging the user to return.
 
 ## Design
 
@@ -49,21 +49,21 @@ The theme of the site is a homage to 1990's/2000's information services such as 
 
 ### Font and Colours
 
-The font chosen is SilkScreen with a back-up font of Sans-Serif in case of a loading error. I wanted to font to simulate early computer system fonts, as this era links with the theme of the site. As mentioned above, the inspiration for the colour scheme was taken from services such as Ceefax and Teletext, therefore a black background was chosen with bright colours used for buttons, borders and titles.
+The font chosen is SilkScreen with a back-up font of Sans-Serif in case of a loading error. I wanted the font to simulate early computer system fonts, as this era links with the theme of the site. As mentioned above, the inspiration for the colour scheme was taken from services such as Ceefax and Teletext, therefore a black background was chosen with bright colours used for buttons, borders and titles.
 
 ### Images
 
-The images for the quiz were taken from a variety of sporting websites - see credits for more details. All images have been resized before adding to the site to ensure efficient formatting.
+The images for the quiz were taken from a variety of sporting websites (see Credits for more details). All images have been resized before adding to the site to ensure efficient formatting.
 
 ### Miro
 
-This website was used in the planning process. It was a tool to create a flow for my site to follow. Using this board allow me to plan step-by-step, the quiz and the functionality my site needed. Here is a partial screenshot of my board.
+This website was used in the planning process. It was a tool to create flow for my site to follow. Using this board allowed me to plan the quiz step-by-step and the functionality my site needed. Here is a partial screenshot of my board.
 
 ![Miro](documentation/miro.png)
 
 ### Wireframes
 
-The following wireframes were produced at the start of the design process and have not been altered. These designs show the various screens I wanted to include as well as what they are expected to look like on smaller devices such as mobile and tablets.
+The following wireframes were produced at the start of the design process and have not been altered. These designs show the various screens I wanted to include as well as what they are expected to look like on smaller devices such as mobiles and tablets.
 
 #### Landing page
 
@@ -118,16 +118,16 @@ The following wireframes were produced at the start of the design process and ha
 - One game type is considered the 'easy' mode, where they have to guess the team the shirt belongs to.
 - In this section the rules of both modes are explained.
 - The other game mode is considered a harder mode, where the user needs to guess the year the photo was taken.
-- Once the rules have been read the user may select an option.
+- Once the rules have been read, the user may select an option.
 
 ![Game-choice](documentation/game-selection.png)
 
 ### Quiz screen
 
-- This is the main part of the quiz, where the question number, user score, out of how many questions, the question and image, four answer buttons and the next question button appear.
-- As the user progress through the question, navigating using the 'next question' button, the question number will increment.
-- If a user is successful in their answer the users score is incremented too.
-- If a user is unsuccessful, a sentence appears, informing the user of the correct answer.
+- This is the main part of the quiz where several items appear including the question number, user score and total number of questions, the question itself and corresponding image, four answer buttons and the 'Next Question' button.
+- As the user progresses through the questions by using the 'Next Question' button, the question number will increase.
+- If a user gets the answer correct, the user's score is increases.
+- If a user gets the answer incorrect, the user's score does not increase and a sentence appears informing the user of the correct answer.
 
 ![Guess team](documentation/guess-team.png)
 
@@ -143,10 +143,10 @@ The following wireframes were produced at the start of the design process and ha
 
 ### Results screen
 
-- In this section a container displays the users final score out of however many questions in the dataset.
+- In this section a container displays the user's final score out of ten.
 - A unique written message containing their username appears, thanking the user for playing.
 - An if statement was written to show different messages depending on the score the user had.
-- Once a user has completed the quiz, a button is there to take the user back to the landing page.
+- Once a user has completed the quiz, they can return to the landing page by selecting 'Go to the home screen'.
 
 ![Results](documentation/results-1.png)
 
@@ -159,10 +159,10 @@ The following wireframes were produced at the start of the design process and ha
 ### Future features
 
 If this site was to be expanded, I would implement the following:
-- Two new game modes - a harder guess the team mode and a guess the team badge mode.
+- Two new game modes - a harder 'Guess the Team' mode and a 'Guess the Team Badge' mode.
 - A message that warns the user they are leaving the page if they click the title button.
 - More questions in each game mode.
-- An option to choose a favourite team at the start and a colour scheme would apply to the site.
+- An option to choose a favourite team at the start and a corresponding colour scheme would then apply to the site.
 - A function could be used to shuffle the order of questions.
 
 
@@ -188,7 +188,7 @@ If this site was to be expanded, I would implement the following:
 - [Responsive viewer](https://responsiveviewer.org/) - this was used to check responsiveness on a variety of devices.
 - [JShint](https://jshint.com/) - this was utilised to check my JS file for errors.
 - [Miro](https://www.miro.com) - this was used to create a workflow of the functions needed.
-- [Wave Accessability](https://wave.webaim.org/) - this was used to test the accessability of the site.
+- [Wave Accessability](https://wave.webaim.org/) - this was used to test the accessibility of the site.
 
 ## Testing
 
@@ -239,7 +239,7 @@ The biggest issue I faced in this project was passing my array for the second ga
 
 ### Images
 
-All images for the Guess the Shirt game were found on this website - [oldfoootballshirts](https://www.oldfootballshirts.com/en/index.php)
+All images for the Guess the Shirt game were found on this website - [oldfootballshirts](https://www.oldfootballshirts.com/en/index.php)
 
 The images for the Guess the Year game were found from the following:
 
@@ -274,6 +274,6 @@ I needed the assistance of the Code Institute tutors twice during this project -
 
 ### Notable mentions
 
-- My mentor Julia, has been a source of knowledge, advice and support with expert feedback and suggestions throughout.
-- My course facilatator Lewis, has provided wonderful support to our cohort, with engaging and useful weekly stand-up meetings. This has kept me going throughout the sometimes confusing introduction into Javascript.
-- My fantastic partner Emma, who has shown tremendous patience, understanding and has allowed me the time to pursue this new venture - thank you.
+- My mentor Julia has been a source of knowledge, advice and support with expert feedback and suggestions throughout.
+- My course facilatator Lewis has provided wonderful support to our cohort with engaging and useful weekly stand-up meetings. This has kept me going throughout the sometimes confusing introduction into Javascript.
+- My fantastic partner Emma who has shown tremendous patience, understanding and has allowed me the time to pursue this new venture - thank you.
