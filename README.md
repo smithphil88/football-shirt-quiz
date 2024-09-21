@@ -63,7 +63,7 @@ This website was used in the planning process. It was a tool to create a flow fo
 
 ### Wireframes
 
-The following wireframes were produced at the start of the design process and have not been altered. These designs show the various screens I wanted to include.
+The following wireframes were produced at the start of the design process and have not been altered. These designs show the various screens I wanted to include as well as what they are expected to look like on smaller devices such as mobile and tablets.
 
 #### Landing page
 
@@ -175,7 +175,7 @@ If this site was to be expanded, I would implement the following:
 
 #### Technologies used 
 
-- [Google Fonts](https://fonts.google.com/) - this was used to import the fonts Silkscreen.
+- [Google Fonts](https://fonts.google.com/) - this was used to import the fonts Silkscreen and Sans-Serif.
 - [Font Awesome](https://fontawesome.com/) - this was used in order to have icons load onto certain pages.
 - [Simple Image Sizer](https://www.simpleimageresizer.com/) - this was used to convert images from JPEG to WEBP.
 - [Image Resizer](https://imageresizer.com/) - this site was used to resize some of the images.
@@ -233,7 +233,7 @@ A bug appeared throughout the latter stages of the development process. This onl
 
 ![Bug](documentation/bug-3.png)
 
-The biggest issue I faced in this project was passing my array for the second game mode - *fixed by creating a variable that allowed the game mode change, which held the specific set of data.*
+The biggest issue I faced in this project was passing my array for the second game mode - *fixed by creating a variable that allowed the game mode to change, which held the specific set of data.*
 
 ## Credits
 

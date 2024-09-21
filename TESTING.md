@@ -64,13 +64,13 @@ In this section, I will evidence the user-stories.
 
 ![Responsive](documentation/tablet-responsive.png)
 
-- As the owner, I want the website to be fun and interesting, so the user returns.***Pass***
+- As the owner, I want the website to be fun and interesting, so the user returns. ***Pass***
 
-[Returns](documentation/results-4.png)
+![Returns](documentation/results-4.png)
 
-[Returns](documentation/results-1.png)
+![Returns](documentation/results-1.png)
 
-[Returns](documentation/game-selection.png)
+![Returns](documentation/game-selection.png)
 
 ### Validation
 
@@ -100,12 +100,12 @@ I ran the site through the lighthouse testing suite in devtools and all passed.
 | --- | --- | --- |
 | Mobile (Chrome DevTools) | ![DevTools](documentation/devtools-mobile.png) | Pass |
 | Mobile (Pixel 7) | ![Pixel 7](documentation/pixel-7.png) | Pass |
-| Mobile (Iphone-14) | ![Iphone-14](documentation/iphone-14-pro.png) | Pass |
+| Mobile (iPhone-14) | ![Iphone-14](documentation/iphone-14-pro.png) | Pass |
 | Tablet (Chrome DevTools) | ![Devtools](documentation/tablet-responsive-1.png) | Pass |
-| Tablet (ipad) | ![ipad](documentation/ipad.png) | Pass |
-| Tablet (Chrome DevTools) | ![Devtools](documentation/galaxy-tab-1.png) | Pass |
+| Tablet (iPad) | ![ipad](documentation/ipad.png) | Pass |
+| Tablet (Galaxy Tablet) | ![Devtools](documentation/galaxy-tab-1.png) | Pass |
 | Large laptop (1440px) | ![DevTools](documentation/large-laptop.png) | Pass |
-| Desktop (iMac) | ![iMac](documentation/macbook-pro-16.png) | Pass |
+| Desktop (Macbook Pro) | ![iMac](documentation/macbook-pro-16.png) | Pass |
 
 ### Browser Compatability
 
@@ -122,17 +122,17 @@ I have tested my site on a number of browsers to check for any issues.
 
 #### Rules and Selection screens
 
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expectation | Test Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
-| Title of site | Redirect to Landing Page | Click logo | Redirects to Home Page | Pass |
+| Title of site | Redirect to Landing Page | Click logo | Redirects to Landing Page | Pass |
 | User Submit | A welcome message appears with their username | Enter a username | Welcome message appears | Pass |
+| Username value | A username must be entered in order to play | Username is skipped | An alert occurs, informing user to enter a name | Pass |
 | User-Validation | A username cannot be more than 20 characters | Entered a username longer than 20 characters | An alert appears informing user to shorten their name | Pass |
 | Game-choices | Direct user to the game choice selection screen | Click game-choice button | Redirects game choice selection screen | Pass |
-| Title of site | Redirect to Landing Page | Click logo | Redirects to Home Page | Pass |
 
 #### Quiz
 
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expectation | Test Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
 | Title of site | Redirect to Landing Page | Click logo | Redirects to Home Page | Pass |
 | Answer button correct| If a user clicks a correct answer, the button turns green | Click answer button | Answer button turns green | Pass |
@@ -146,8 +146,9 @@ I have tested my site on a number of browsers to check for any issues.
 
 #### Results 
 
-| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| Feature | Expectation | Test Performed | Result | Pass/Fail |
 | --- | --- | --- | --- | --- |
+| Title of site | Redirect to Landing Page | Click logo | Redirects to Home Page | Pass |
 | Final score | Score is retained throughout quiz and displayed at the end | Checked visually | Final score is avaliable to the user | Pass |
 | Username result | The username entered is used in a thank you message | Checked visually | Username is on show | Pass |
 | Result messages | The user recieves a differentiated message depending on what score they recieved | Checked visually | Different message appear on the results screen | Pass |
