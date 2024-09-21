@@ -188,6 +188,7 @@ If this site was to be expanded, I would implement the following:
 - [Responsive viewer](https://responsiveviewer.org/) - this was used to check responsiveness on a variety of devices.
 - [JShint](https://jshint.com/) - this was utilised to check my JS file for errors.
 - [Miro](https://www.miro.com) - this was used to create a workflow of the functions needed.
+- [Wave Accessability](https://wave.webaim.org/) - this was used to test the accessability of the site.
 
 ## Testing
 
@@ -224,7 +225,7 @@ A variety of bugs occured during the development process. With a combination of 
 
 ![Bug](documentation/username-error.png)
 
-This occured at the very end of the project when manually testing. All code and functionality worked as expected, however when changing username this error appeared. *Fixed by hiding the label, input field and button when the submit button was clicked.*
+This occured at the very end of the project when manually testing. All code and functionality worked as expected, however when changing username this error appeared - *fixed by hiding the label, input field and button when the submit button was clicked.*
 
 ![Bug](documentation/bug-2.png)
 
@@ -262,3 +263,17 @@ The images for the Guess the Year game were found from the following:
 
 •	[AC-Milan](https://x.com/ProD_Soccer/status/1182657672329478145)
 
+### Code 
+
+This video tutorial was used to conduct some research into some of the elements needed for a quiz application. 
+[Live Blogger](https://www.youtube.com/watch?v=x9AaCfk0qh8&t=0s)
+
+### Tutors
+
+I needed the assistance of the Code Institute tutors twice during this project - namely to assist with producing the second game mode and helping to provide a solution for the username bug.
+
+### Notable mentions
+
+- My mentor Julia, has been a source of knowledge, advice and support with expert feedback and suggestions throughout.
+- My course facilatator Lewis, has provided wonderful support to our cohort, with engaging and useful weekly stand-up meetings. This has kept me going throughout the sometimes confusing introduction into Javascript.
+- My fantastic partner Emma, who has shown tremendous patience, understanding and has allowed me the time to pursue this new venture - thank you.

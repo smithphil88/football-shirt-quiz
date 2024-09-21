@@ -88,5 +88,78 @@ JShint - ***passed***
 
 ![JShint](documentation/jshint-1.png)
 
+### Lighthouse
 
+I ran the site through the lighthouse testing suite in devtools and all passed.
 
+![Lighthouse](documentation/lighthouse-evidence.png)
+
+### Responsiveness
+
+| Device and size | Screenshot | Comments |
+| --- | --- | --- |
+| Mobile (Chrome DevTools) | ![DevTools](documentation/devtools-mobile.png) | Pass |
+| Mobile (Pixel 7) | ![Pixel 7](documentation/pixel-7.png) | Pass |
+| Mobile (Iphone-14) | ![Iphone-14](documentation/iphone-14-pro.png) | Pass |
+| Tablet (Chrome DevTools) | ![Devtools](documentation/tablet-responsive-1.png) | Pass |
+| Tablet (ipad) | ![ipad](documentation/ipad.png) | Pass |
+| Tablet (Chrome DevTools) | ![Devtools](documentation/galaxy-tab-1.png) | Pass |
+| Large laptop (1440px) | ![DevTools](documentation/large-laptop.png) | Pass |
+| Desktop (iMac) | ![iMac](documentation/macbook-pro-16.png) | Pass |
+
+### Browser Compatability
+
+I have tested my site on a number of browsers to check for any issues.
+
+| Browser | Screenshot | Comments |
+| --- | --- | --- |
+| Chrome | ![Chrome](documentation/chrome.png) | Works as expected |
+| Edge | ![Edge](documentation/edge.png) | Works as expected |
+| Firefox | ![Firefox](documentation/firefox.png) | Works as expected |
+| Brave | ![Brave](documentation/brave.png) | Works as expected |
+
+### Manual Testing
+
+#### Rules and Selection screens
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Title of site | Redirect to Landing Page | Click logo | Redirects to Home Page | Pass |
+| User Submit | A welcome message appears with their username | Enter a username | Welcome message appears | Pass |
+| User-Validation | A username cannot be more than 20 characters | Entered a username longer than 20 characters | An alert appears informing user to shorten their name | Pass |
+| Game-choices | Direct user to the game choice selection screen | Click game-choice button | Redirects game choice selection screen | Pass |
+| Title of site | Redirect to Landing Page | Click logo | Redirects to Home Page | Pass |
+
+#### Quiz
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Title of site | Redirect to Landing Page | Click logo | Redirects to Home Page | Pass |
+| Answer button correct| If a user clicks a correct answer, the button turns green | Click answer button | Answer button turns green | Pass |
+| Answer button incorrect| If a user clicks an incorrect answer, a sentence appears with the correct answer| Click answer button | A sentence appears with the correct answer | Pass |
+| Answer button correct| If a user clicks a correct answer, the score increases by one | Click answer button | User score increases by one | Pass |
+| Answer button incorrect| If a user clicks an incorrect answer, the score stays the same | Click answer button | User score stays the same | Pass |
+| Next button | If a user clicks the next button, the next question appears | Click next question button | A new question appears | Pass |
+| Question number | If a user clicks the next button, the current question number increases by one | Click next question button | The current question number increases by one | Pass |
+| Hover over answer button | If a user hovers over an answer, the buttons turns dark blue, so they know where the cursor is | Hover over an answer button | The answer button becomes darker | Pass |
+| Hover over next button | If a user hovers over the next question button, it inverts the colours, so they know where the cursor is | Hover over the next question button | The colour on the next question button inverts | Pass |
+
+#### Results 
+
+| Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+| Final score | Score is retained throughout quiz and displayed at the end | Checked visually | Final score is avaliable to the user | Pass |
+| Username result | The username entered is used in a thank you message | Checked visually | Username is on show | Pass |
+| Result messages | The user recieves a differentiated message depending on what score they recieved | Checked visually | Different message appear on the results screen | Pass |
+| Result images | The user recieves a differentiated image depending on what score they recieved | Checked visually | Different images appear on the results screen | Pass |
+| Return to start | The user can return to the start of the quiz to restart | Button clicked | Redirected to landing page | Pass |
+
+### Wave accessability
+
+This site was used to check for any errors in my site - it provided one error, which has now been addressed. The error stated my username input did not have an associated label that matched.
+
+![Wave accessabilty](documentation/wave-accessability.png)
+
+### README
+
+A link back to the [README](README.md) file.
